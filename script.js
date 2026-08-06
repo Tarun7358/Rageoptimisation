@@ -457,22 +457,11 @@ function cacheDOMElements() {
   elements.btnDownloadReg = document.getElementById("btn-download-reg");
   elements.regCard = document.getElementById("reg-download-card");
 
-  // Visitor Eye Toggle Elements
-  elements.btnToggleVisitors = document.getElementById("btn-toggle-visitors");
-  elements.visitorEyeIcon = document.getElementById("visitor-eye-icon");
-  elements.visitorBtnLabel = document.getElementById("visitor-btn-label");
-  elements.visitorStatsCard = document.getElementById("visitor-stats-card");
+  // Real-Time Visitor Badge Element
   elements.statTotalVisits = document.getElementById("stat-total-visits");
-  elements.statActiveNow = document.getElementById("stat-active-now");
-  elements.statPresetsUnlocked = document.getElementById("stat-presets-unlocked");
 }
 
 function attachEventListeners() {
-  // Visitor Eye Toggle Handler
-  if (elements.btnToggleVisitors) {
-    elements.btnToggleVisitors.addEventListener("click", toggleVisitorStats);
-  }
-
   // Brand Logo Click -> Reset to Landing
   if (elements.brandLogo) {
     elements.brandLogo.addEventListener("click", (e) => {
@@ -1008,7 +997,7 @@ function showToast(message) {
 }
 
 /* --------------------------------------------------------------------------
-   Visitor Eye Toggle & Live Traffic Analytics Counter (Real-Time API)
+   Real-Time Global Visitor Analytics Counter
    -------------------------------------------------------------------------- */
 async function initVisitorCounter() {
   const BASE_OFFSET = 148920; // Verified enterprise baseline visits count
@@ -1036,62 +1025,8 @@ async function initVisitorCounter() {
     totalVisits = storedVisits;
   }
 
-  const presetsUnlocked = Math.floor(totalVisits * 0.635);
-  let activeUsers = Math.floor(Math.random() * (88 - 58 + 1)) + 58;
-
-  if (elements.statTotalVisits) elements.statTotalVisits.innerText = totalVisits.toLocaleString();
-  if (elements.statActiveNow) elements.statActiveNow.innerText = activeUsers.toString();
-  if (elements.statPresetsUnlocked) elements.statPresetsUnlocked.innerText = presetsUnlocked.toLocaleString();
-
-  // Periodic active online users heartbeat to reflect live traffic activity
-  setInterval(() => {
-    const delta = Math.floor(Math.random() * 7) - 3; // -3 to +3
-    activeUsers = Math.max(48, Math.min(106, activeUsers + delta));
-    if (elements.statActiveNow) {
-      elements.statActiveNow.innerText = activeUsers.toString();
-    }
-  }, 4000);
-}
-
-function toggleVisitorStats() {
-  if (!elements.visitorStatsCard) return;
-
-  const isHidden = elements.visitorStatsCard.classList.contains("hidden");
-
-  if (isHidden) {
-    // Show stats card
-    elements.visitorStatsCard.classList.remove("hidden");
-    if (elements.btnToggleVisitors) elements.btnToggleVisitors.classList.add("active");
-
-    if (elements.visitorEyeIcon) {
-      elements.visitorEyeIcon.className = "fa-solid fa-eye";
-    }
-    if (elements.visitorBtnLabel) {
-      elements.visitorBtnLabel.innerText = "Hide Live Visitors";
-    }
-
-    // Trigger number pop animation
-    [elements.statTotalVisits, elements.statActiveNow, elements.statPresetsUnlocked].forEach((el) => {
-      if (el) {
-        el.style.transform = "scale(1.15)";
-        setTimeout(() => {
-          el.style.transform = "scale(1)";
-          el.style.transition = "transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)";
-        }, 150);
-      }
-    });
-
-  } else {
-    // Hide stats card
-    elements.visitorStatsCard.classList.add("hidden");
-    if (elements.btnToggleVisitors) elements.btnToggleVisitors.classList.remove("active");
-
-    if (elements.visitorEyeIcon) {
-      elements.visitorEyeIcon.className = "fa-solid fa-eye-slash";
-    }
-    if (elements.visitorBtnLabel) {
-      elements.visitorBtnLabel.innerText = "Show Live Visitors";
-    }
+  if (elements.statTotalVisits) {
+    elements.statTotalVisits.innerText = totalVisits.toLocaleString();
   }
 }
 
