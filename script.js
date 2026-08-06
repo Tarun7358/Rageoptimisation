@@ -543,71 +543,70 @@ function renderSpecTierScreen(platform) {
     elements.specTitle.innerText = "SELECT YOUR PHONE BRAND & MODEL";
     elements.specSubtitle.innerText = "Filter or pick your exact mobile model to fetch community-calibrated pro sensitivities.";
 
-    // Render Brand Tabs & Model Selection View
+    // Render Dual Dropdown Selection View (Brand & Model Dropdowns)
     const brandContainer = document.createElement("div");
     brandContainer.className = "mobile-brand-wrapper";
 
-    // 1. Brand Selection Pills Grid
-    const brandPillsGrid = document.createElement("div");
-    brandPillsGrid.className = "brand-pills-grid";
-
-    CONFIG.MOBILE_BRANDS.forEach((brand) => {
-      const isSelected = brand.id === state.selectedMobileBrand;
-      const brandBtn = document.createElement("button");
-      brandBtn.className = `brand-pill-btn ${isSelected ? "selected" : ""}`;
-      brandBtn.innerHTML = `<i class="${brand.icon}"></i> ${brand.name}`;
-      brandBtn.addEventListener("click", () => {
-        state.selectedMobileBrand = brand.id;
-        state.selectedMobileModel = brand.models[0];
-        renderSpecTierScreen("mobile");
-      });
-      brandPillsGrid.appendChild(brandBtn);
-    });
-
-    brandContainer.appendChild(brandPillsGrid);
-
-    // 2. Models Selection Box for Active Brand with Pure Dropdown Picker (No Typing Needed)
     const activeBrand = CONFIG.MOBILE_BRANDS.find((b) => b.id === state.selectedMobileBrand) || CONFIG.MOBILE_BRANDS[0];
-    
+
     const modelCard = document.createElement("div");
     modelCard.className = "model-selector-card";
     modelCard.innerHTML = `
-      <div class="model-card-header">
-        <i class="${activeBrand.icon}"></i> <strong>${activeBrand.name} Models (${activeBrand.models.length}+ Devices)</strong>
-      </div>
+      <!-- Brand Selection Dropdown Box -->
       <div class="model-dropdown-wrapper">
+        <label for="brand-select-dropdown" class="model-select-label">
+          <i class="fa-solid fa-mobile-screen-button"></i> 1. Select Device Brand:
+        </label>
+        <select id="brand-select-dropdown" class="model-select-dropdown"></select>
+      </div>
+
+      <!-- Device Model Selection Dropdown Box -->
+      <div class="model-dropdown-wrapper" style="margin-top: 0.85rem;">
         <label for="model-select-dropdown" class="model-select-label">
-          <i class="fa-solid fa-list-check"></i> Choose Phone Model from Dropdown:
+          <i class="fa-solid fa-list-check"></i> 2. Select Device Model:
         </label>
         <select id="model-select-dropdown" class="model-select-dropdown"></select>
       </div>
-      <p class="model-card-sub" style="margin-top: 0.5rem;">Or tap your model directly from list below:</p>
-      <div class="model-pills-grid" id="model-pills-grid"></div>
-      <button class="cta-button-primary" id="btn-confirm-mobile-device" style="margin-top: 1rem; width: 100%;">
-        Get Best ${activeBrand.name} Sensitivity <i class="fa-solid fa-arrow-right"></i>
+
+      <button class="cta-button-primary" id="btn-confirm-mobile-device" style="margin-top: 1.25rem; width: 100%;">
+        Get Best Sensitivity <i class="fa-solid fa-arrow-right"></i>
       </button>
     `;
 
     brandContainer.appendChild(modelCard);
     elements.specGrid.appendChild(brandContainer);
 
-    // Populate model dropdown options and model pills
+    // Get Dropdown Elements
+    const brandSelectDropdown = document.getElementById("brand-select-dropdown");
     const modelSelectDropdown = document.getElementById("model-select-dropdown");
-    const modelPillsGrid = document.getElementById("model-pills-grid");
 
-    function populateModelOptions() {
-      if (!modelSelectDropdown || !modelPillsGrid) return;
+    // 1. Populate Brand Dropdown
+    if (brandSelectDropdown) {
+      brandSelectDropdown.innerHTML = "";
+      CONFIG.MOBILE_BRANDS.forEach((brand) => {
+        const option = document.createElement("option");
+        option.value = brand.id;
+        option.innerText = brand.name;
+        if (brand.id === state.selectedMobileBrand) {
+          option.selected = true;
+        }
+        brandSelectDropdown.appendChild(option);
+      });
+    }
 
+    // 2. Function to Populate Model Dropdown based on Selected Brand
+    function updateModelDropdown(brandId) {
+      if (!modelSelectDropdown) return;
+
+      const currentBrand = CONFIG.MOBILE_BRANDS.find((b) => b.id === brandId) || CONFIG.MOBILE_BRANDS[0];
       modelSelectDropdown.innerHTML = "";
-      modelPillsGrid.innerHTML = "";
 
       // Ensure active selected model is valid for current brand
-      if (!activeBrand.models.includes(state.selectedMobileModel)) {
-        state.selectedMobileModel = activeBrand.models[0];
+      if (!currentBrand.models.includes(state.selectedMobileModel)) {
+        state.selectedMobileModel = currentBrand.models[0];
       }
 
-      // Populate Dropdown Options
-      activeBrand.models.forEach((m) => {
+      currentBrand.models.forEach((m) => {
         const option = document.createElement("option");
         option.value = m;
         option.innerText = m;
@@ -616,37 +615,25 @@ function renderSpecTierScreen(platform) {
         }
         modelSelectDropdown.appendChild(option);
       });
+    }
 
-      // Populate Clickable Model Pills
-      activeBrand.models.forEach((m) => {
-        const isSelected = m === state.selectedMobileModel;
-        const pill = document.createElement("div");
-        pill.className = `model-pill ${isSelected ? "selected" : ""}`;
-        pill.innerText = m;
-        pill.addEventListener("click", () => {
-          state.selectedMobileModel = m;
-          modelSelectDropdown.value = m;
-          document.querySelectorAll(".model-pill").forEach(p => p.classList.remove("selected"));
-          pill.classList.add("selected");
-        });
-        modelPillsGrid.appendChild(pill);
+    updateModelDropdown(state.selectedMobileBrand);
+
+    // Event Listeners for Dual Dropdowns
+    if (brandSelectDropdown) {
+      brandSelectDropdown.addEventListener("change", (e) => {
+        state.selectedMobileBrand = e.target.value;
+        const brandObj = CONFIG.MOBILE_BRANDS.find((b) => b.id === e.target.value);
+        if (brandObj && brandObj.models.length > 0) {
+          state.selectedMobileModel = brandObj.models[0];
+        }
+        updateModelDropdown(e.target.value);
       });
     }
 
-    populateModelOptions();
-
-    // Dropdown change listener
     if (modelSelectDropdown) {
       modelSelectDropdown.addEventListener("change", (e) => {
         state.selectedMobileModel = e.target.value;
-        // Sync pill highlights
-        document.querySelectorAll(".model-pill").forEach(p => {
-          if (p.innerText === e.target.value) {
-            p.classList.add("selected");
-          } else {
-            p.classList.remove("selected");
-          }
-        });
       });
     }
 
