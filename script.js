@@ -333,13 +333,21 @@ const CONFIG = {
     },
     {
       id: "nothing",
-      name: "Nothing Phone / CMF",
+      name: "Nothing Phone / CMF (3a Lite, 3a, Phone 3, CMF Series)",
       icon: "fa-solid fa-mobile-button",
       models: [
+        "Nothing Phone (3a) Lite",
+        "Nothing Phone (3a) Pro",
+        "Nothing Phone (3a)",
+        "Nothing Phone (3) Pro",
+        "Nothing Phone (3)",
         "Nothing Phone (2a) Plus",
+        "Nothing Phone (2a) Community Edition",
         "Nothing Phone (2a)",
         "Nothing Phone (2)",
         "Nothing Phone (1)",
+        "CMF Phone 2 Pro",
+        "CMF Phone 2",
         "CMF Phone 1"
       ],
       sensi: {
@@ -1231,7 +1239,7 @@ function getModelSensitivity(brandId, modelName, fallbackSensi) {
     tips[1] = `Enable Game Accelerator in Magic UI / EMUI settings for reduced touch latency on ${modelName}.`;
   } else if (/Pixel/i.test(modelName) || brandId === "google") {
     tips[1] = `Enable 'Smooth Display' in Display settings for maximum touch sampling on ${modelName}.`;
-  } else if (/Nothing/i.test(modelName) || brandId === "nothing") {
+  } else if (/Nothing|CMF/i.test(modelName) || brandId === "nothing") {
     tips[1] = `Nothing OS features ultra-low latency—enable 120Hz display refresh rate for smooth drag tracking on ${modelName}.`;
   } else if (brandId === "apple") {
     tips[0] = `Calibrated specifically for ${modelName}: iOS touch curves provide native smooth acceleration.`;
