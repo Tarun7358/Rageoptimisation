@@ -43,6 +43,61 @@ const CONFIG = {
       }
     },
     {
+      id: "iqoo",
+      name: "iQOO (Z10 5G, Neo & Monster Gaming Series)",
+      icon: "fa-solid fa-bolt-lightning",
+      models: [
+        "iQOO Z10 5G", "iQOO Z10 Pro 5G", "iQOO Z10x 5G",
+        "iQOO Z9s Pro 5G", "iQOO Z9s 5G", "iQOO Z9 5G", "iQOO Z9x 5G", "iQOO Z9 Turbo",
+        "iQOO 13 5G", "iQOO 12 Pro", "iQOO 12 5G", "iQOO 11 5G", "iQOO 9 Pro", "iQOO 9T", "iQOO 9 5G", "iQOO 9 SE", "iQOO 7 Legend", "iQOO 7",
+        "iQOO Neo 9 Pro", "iQOO Neo 9", "iQOO Neo 7 Pro", "iQOO Neo 7", "iQOO Neo 6",
+        "iQOO Z8", "iQOO Z7 Pro 5G", "iQOO Z7 5G", "iQOO Z7s 5G", "iQOO Z6 Pro 5G", "iQOO Z6 5G", "iQOO Z6 Lite 5G"
+      ],
+      sensi: {
+        general: "178",
+        redDot: "170",
+        scope2x: "165",
+        scope4x: "160",
+        awm: "100",
+        freeLook: "155",
+        fireButton: "43%",
+        dpi: "410 DPI",
+        proTips: [
+          "Enable Monster Mode in iQOO Game Space for maximum CPU/GPU & 1200Hz Instant Touch Sampling.",
+          "Set Smallest Width (DPI) to 410 in Developer Options for fast upward drag lock.",
+          "Keep Fire Button at 43% near the lower right quadrant for smooth drag headshots."
+        ]
+      }
+    },
+    {
+      id: "vivo",
+      name: "Vivo (T4 5G, V40, V30, T3, X Series)",
+      icon: "fa-solid fa-mobile-screen-button",
+      models: [
+        "Vivo T4 5G", "Vivo T4 Pro 5G", "Vivo T4x 5G",
+        "Vivo V40 Pro 5G", "Vivo V40 5G", "Vivo V40 SE 5G", "Vivo V30 Pro", "Vivo V30", "Vivo V30e",
+        "Vivo T3 Ultra", "Vivo T3 Pro 5G", "Vivo T3 5G", "Vivo T3x 5G", "Vivo T2 Pro 5G", "Vivo T2 5G", "Vivo T2x 5G", "Vivo T1 Pro 5G", "Vivo T1 5G",
+        "Vivo X100 Pro", "Vivo X100", "Vivo X90 Pro", "Vivo X90", "Vivo X80 Pro",
+        "Vivo V29 Pro", "Vivo V29", "Vivo V29e", "Vivo V27 Pro", "Vivo V27", "Vivo V25 Pro", "Vivo V23 Pro",
+        "Vivo Y300 5G", "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y16", "Vivo Y21"
+      ],
+      sensi: {
+        general: "190",
+        redDot: "183",
+        scope2x: "178",
+        scope4x: "173",
+        awm: "106",
+        freeLook: "158",
+        fireButton: "45%",
+        dpi: "435 DPI",
+        proTips: [
+          "Set Smallest Width (DPI) to 435 in Funtouch OS Developer Options.",
+          "Enable Ultra Game Mode for peak touch response acceleration.",
+          "Set Fire Button at 45% positioned low for smooth upward drag headshots."
+        ]
+      }
+    },
+    {
       id: "xiaomi",
       name: "Xiaomi / POCO / Redmi",
       icon: "fa-solid fa-mobile-screen-button",
@@ -59,7 +114,7 @@ const CONFIG = {
         "Redmi Note 9 Pro Max", "Redmi Note 9 Pro", "Redmi Note 9S", "Redmi Note 9", "Redmi Note 8 Pro", "Redmi Note 8",
         // Redmi Budget & Xiaomi Flagships
         "Redmi 13C 5G", "Redmi 13C", "Redmi 12 5G", "Redmi 12", "Redmi 11 Prime 5G", "Redmi 10C", "Redmi 10", "Redmi 9A", "Redmi 9C", "Redmi A3", "Redmi A2+",
-        "Xiaomi 14 Ultra", "Xiaomi 14 Pro", "Xiaomi 14", "Xiaomi 13T Pro", "Xiaomi 13T", "Xiaomi 13 Pro", "Xiaomi 13 Ultra",
+        "Xiaomi 14 Ultra", "Xiaomi 14 Pro", "Xiaomi 14", "Xiaomi 14T Pro", "Xiaomi 14T", "Xiaomi 13T Pro", "Xiaomi 13T", "Xiaomi 13 Pro", "Xiaomi 13 Ultra",
         "Xiaomi 12T Pro", "Xiaomi 12 Pro", "Xiaomi 12X", "Xiaomi 11T Pro", "Xiaomi Mi 11X Pro", "Xiaomi Mi 11X", "Xiaomi Mi 10i"
       ],
       sensi: {
@@ -84,7 +139,7 @@ const CONFIG = {
       icon: "fa-solid fa-mobile-retro",
       models: [
         // S-Series Flagships
-        "Galaxy S24 Ultra", "Galaxy S24+", "Galaxy S24",
+        "Galaxy S24 Ultra", "Galaxy S24+", "Galaxy S24", "Galaxy S24 FE",
         "Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy S23 FE",
         "Galaxy S22 Ultra", "Galaxy S22+", "Galaxy S22",
         "Galaxy S21 Ultra", "Galaxy S21+", "Galaxy S21", "Galaxy S21 FE 5G",
@@ -93,12 +148,12 @@ const CONFIG = {
         "Galaxy A55 5G", "Galaxy A54 5G", "Galaxy A53 5G", "Galaxy A52s 5G", "Galaxy A52 5G", "Galaxy A52", "Galaxy A51",
         "Galaxy A35 5G", "Galaxy A34 5G", "Galaxy A33 5G", "Galaxy A32 5G", "Galaxy A32",
         "Galaxy A25 5G", "Galaxy A24", "Galaxy A23 5G", "Galaxy A23", "Galaxy A22 5G",
-        "Galaxy A15 5G", "Galaxy A14 5G", "Galaxy A14", "Galaxy A13", "Galaxy A12", "Galaxy A05s", "Galaxy A04s", "Galaxy A03s",
+        "Galaxy A16 5G", "Galaxy A15 5G", "Galaxy A14 5G", "Galaxy A14", "Galaxy A13", "Galaxy A12", "Galaxy A05s", "Galaxy A04s", "Galaxy A03s",
         // M & F Series
         "Galaxy M55 5G", "Galaxy M54 5G", "Galaxy M53 5G", "Galaxy M52 5G", "Galaxy M34 5G", "Galaxy M33 5G", "Galaxy M32 5G",
-        "Galaxy M14 5G", "Galaxy M13 5G", "Galaxy M12", "Galaxy F54 5G", "Galaxy F34 5G", "Galaxy F14 5G", "Galaxy F23 5G",
+        "Galaxy M14 5G", "Galaxy M13 5G", "Galaxy M12", "Galaxy F55 5G", "Galaxy F54 5G", "Galaxy F34 5G", "Galaxy F14 5G", "Galaxy F23 5G",
         // Z-Series Foldables
-        "Galaxy Z Fold 5", "Galaxy Z Fold 4", "Galaxy Z Fold 3", "Galaxy Z Flip 5", "Galaxy Z Flip 4"
+        "Galaxy Z Fold 6", "Galaxy Z Fold 5", "Galaxy Z Fold 4", "Galaxy Z Fold 3", "Galaxy Z Flip 6", "Galaxy Z Flip 5", "Galaxy Z Flip 4"
       ],
       sensi: {
         general: "188",
@@ -121,10 +176,10 @@ const CONFIG = {
       name: "OPPO (F31 5G, Reno, Find, F & A Series)",
       icon: "fa-solid fa-mobile-screen",
       models: [
-        "OPPO F31 5G", "OPPO F27 Pro+ 5G", "OPPO F27 5G", "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
+        "OPPO F31 5G", "OPPO F27 Pro+ 5G", "OPPO F27 5G", "OPPO Reno 12 Pro 5G", "OPPO Reno 12 5G", "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
         "OPPO Reno 8 Pro 5G", "OPPO Reno 8 5G", "OPPO Reno 7 Pro 5G", "OPPO Reno 6 Pro 5G",
         "OPPO F25 Pro 5G", "OPPO F23 5G", "OPPO F21s Pro 5G", "OPPO F21 Pro 5G", "OPPO F19 Pro+ 5G",
-        "OPPO A79 5G", "OPPO A59 5G", "OPPO A78 5G", "OPPO A58 5G", "OPPO A38", "OPPO A18", "OPPO A17"
+        "OPPO A80 5G", "OPPO A79 5G", "OPPO A59 5G", "OPPO A78 5G", "OPPO A58 5G", "OPPO A38", "OPPO A18", "OPPO A17"
       ],
       sensi: {
         general: "186",
@@ -139,6 +194,140 @@ const CONFIG = {
           "Set Smallest Width (DPI) to 440 in ColorOS Developer Options.",
           "Enable Pro Gaming Mode in Game Assistant for 240Hz Touch Sampling.",
           "Set Fire Button size to 44% positioned low for clean upward drag acceleration."
+        ]
+      }
+    },
+    {
+      id: "realme",
+      name: "Realme",
+      icon: "fa-solid fa-mobile",
+      models: [
+        "Realme 13 Pro+ 5G", "Realme 13 Pro 5G", "Realme 13+ 5G", "Realme 12 Pro+ 5G", "Realme 12 Pro 5G", "Realme 12+ 5G", "Realme 12 5G", "Realme 12x 5G",
+        "Realme 11 Pro+ 5G", "Realme 11 Pro 5G", "Realme 11 5G", "Realme 11x 5G",
+        "Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 10 5G", "Realme 10",
+        "Realme 9 Pro+ 5G", "Realme 9 Pro 5G", "Realme 9i 5G", "Realme 9 5G", "Realme 8 Pro", "Realme 8 5G", "Realme 8", "Realme 7 Pro",
+        "Realme GT 6", "Realme GT 6T", "Realme GT 5 Pro", "Realme GT 5", "Realme GT 3", "Realme GT 2 Pro", "Realme GT 2", "Realme GT Neo 6 SE", "Realme GT Neo 5", "Realme GT Neo 3T", "Realme GT Neo 3", "Realme GT Neo 2", "Realme GT Master Edition",
+        "Realme Narzo 70 Turbo 5G", "Realme Narzo 70 Pro 5G", "Realme Narzo 70x 5G", "Realme Narzo 60 Pro 5G", "Realme Narzo 60x 5G", "Realme Narzo 50 Pro 5G", "Realme Narzo 50", "Realme Narzo 30 5G",
+        "Realme C67 5G", "Realme C65 5G", "Realme C55", "Realme C53", "Realme C35", "Realme C33", "Realme C31", "Realme C25s"
+      ],
+      sensi: {
+        general: "192",
+        redDot: "185",
+        scope2x: "180",
+        scope4x: "175",
+        awm: "108",
+        freeLook: "160",
+        fireButton: "45%",
+        dpi: "430 DPI",
+        proTips: [
+          "Set Smallest Width (DPI) to 430 in Developer Options.",
+          "Enable Pro Gaming Mode in Game Assistant for 240Hz Touch Sampling.",
+          "Keep General at 192 for quick 360-degree drag rotation."
+        ]
+      }
+    },
+    {
+      id: "oneplus",
+      name: "OnePlus",
+      icon: "fa-solid fa-bolt",
+      models: [
+        "OnePlus 13", "OnePlus 12", "OnePlus 12R", "OnePlus 11", "OnePlus 11R",
+        "OnePlus Open", "OnePlus 10 Pro", "OnePlus 10T", "OnePlus 10R",
+        "OnePlus 9 Pro", "OnePlus 9RT", "OnePlus 9", "OnePlus 9R",
+        "OnePlus 8T", "OnePlus 8 Pro", "OnePlus 8", "OnePlus 7T Pro", "OnePlus 7T", "OnePlus 7 Pro",
+        "OnePlus Nord 4", "OnePlus Nord 3 5G", "OnePlus Nord 2T 5G", "OnePlus Nord 2 5G", "OnePlus Nord",
+        "OnePlus Nord CE 4 5G", "OnePlus Nord CE 4 Lite 5G", "OnePlus Nord CE 3 5G", "OnePlus Nord CE 3 Lite 5G", "OnePlus Nord CE 2 5G", "OnePlus Nord CE 2 Lite"
+      ],
+      sensi: {
+        general: "178",
+        redDot: "170",
+        scope2x: "165",
+        scope4x: "160",
+        awm: "100",
+        freeLook: "155",
+        fireButton: "44%",
+        dpi: "400 DPI",
+        proTips: [
+          "OnePlus features ultra-fast 120Hz panels—keep DPI around 400 in Developer Options.",
+          "Enable Ultra Touch / Instant Touch Sampling (1000Hz) in Gaming Space.",
+          "Fire button at 44% gives quick upward recoil lock."
+        ]
+      }
+    },
+    {
+      id: "motorola",
+      name: "Motorola (Edge, G & Razr Series)",
+      icon: "fa-solid fa-m",
+      models: [
+        "Moto Edge 50 Ultra", "Moto Edge 50 Pro 5G", "Moto Edge 50 Fusion", "Moto Edge 50 Neo",
+        "Moto Edge 40 Neo", "Moto Edge 40 5G", "Moto Edge 30 Ultra", "Moto Edge 30 Fusion", "Moto Edge 30 Pro", "Moto Edge 30",
+        "Moto G85 5G", "Moto G84 5G", "Moto G64 5G", "Moto G54 5G", "Moto G45 5G", "Moto G34 5G", "Moto G24 Power", "Moto G14", "Moto G82 5G", "Moto G73 5G", "Moto G62 5G", "Moto G52", "Moto G32", "Moto E13",
+        "Moto Razr 50 Ultra", "Moto Razr 40 Ultra"
+      ],
+      sensi: {
+        general: "187",
+        redDot: "180",
+        scope2x: "174",
+        scope4x: "169",
+        awm: "104",
+        freeLook: "158",
+        fireButton: "46%",
+        dpi: "430 DPI",
+        proTips: [
+          "Set Smallest Width (DPI) to 430 in Developer Options for smooth drag tracking.",
+          "Turn ON High Refresh Rate (120Hz/144Hz) in Display Settings.",
+          "Use Moto Gametime touch optimization for reduced input delay."
+        ]
+      }
+    },
+    {
+      id: "lava",
+      name: "Lava (Agni, Blaze & Storm Series)",
+      icon: "fa-solid fa-fire",
+      models: [
+        "Lava Agni 3 5G", "Lava Agni 2 5G",
+        "Lava Blaze 3 5G", "Lava Blaze Curve 5G", "Lava Blaze Pro 5G", "Lava Blaze 2 5G",
+        "Lava Storm 5G", "Lava Yuva 3 Pro", "Lava Yuva 2 Pro", "Lava Yuva 5G"
+      ],
+      sensi: {
+        general: "191",
+        redDot: "184",
+        scope2x: "178",
+        scope4x: "172",
+        awm: "106",
+        freeLook: "160",
+        fireButton: "47%",
+        dpi: "445 DPI",
+        proTips: [
+          "Set Smallest Width (DPI) to 445 in Developer Options for fast upward drag velocity.",
+          "Lava 120Hz curved AMOLED panels respond best with 47% Fire Button size.",
+          "Clear background RAM before launching Free Fire for 90 FPS stability."
+        ]
+      }
+    },
+    {
+      id: "honor",
+      name: "Honor / Huawei",
+      icon: "fa-solid fa-shield-halved",
+      models: [
+        "Honor 200 Pro 5G", "Honor 200 5G", "Honor 200 Lite",
+        "Honor 90 5G", "Honor X9b 5G", "Honor X8b", "Honor X7b",
+        "Honor Magic 6 Pro", "Honor Magic V2", "Honor Magic 5 Pro",
+        "Huawei Pura 70 Ultra", "Huawei Pura 70 Pro", "Huawei Mate 60 Pro"
+      ],
+      sensi: {
+        general: "185",
+        redDot: "178",
+        scope2x: "173",
+        scope4x: "168",
+        awm: "102",
+        freeLook: "156",
+        fireButton: "44%",
+        dpi: "425 DPI",
+        proTips: [
+          "Set Smallest Width (DPI) to 425 in Developer Options.",
+          "Enable Game Accelerator in Magic UI / EMUI.",
+          "Fire button size at 44% gives crisp headshot lock on 120Hz OLED displays."
         ]
       }
     },
@@ -170,112 +359,46 @@ const CONFIG = {
       }
     },
     {
-      id: "realme",
-      name: "Realme",
-      icon: "fa-solid fa-mobile",
+      id: "google",
+      name: "Google Pixel",
+      icon: "fa-brands fa-google",
       models: [
-        "Realme 12 Pro+ 5G", "Realme 12 Pro 5G", "Realme 12+ 5G", "Realme 12 5G", "Realme 12x 5G",
-        "Realme 11 Pro+ 5G", "Realme 11 Pro 5G", "Realme 11 5G", "Realme 11x 5G",
-        "Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 10 5G", "Realme 10",
-        "Realme 9 Pro+ 5G", "Realme 9 Pro 5G", "Realme 9i 5G", "Realme 9 5G", "Realme 8 Pro", "Realme 8 5G", "Realme 8", "Realme 7 Pro",
-        "Realme GT 5 Pro", "Realme GT 5", "Realme GT 3", "Realme GT 2 Pro", "Realme GT 2", "Realme GT Neo 6 SE", "Realme GT Neo 5", "Realme GT Neo 3T", "Realme GT Neo 3", "Realme GT Neo 2", "Realme GT Master Edition",
-        "Realme Narzo 70 Pro 5G", "Realme Narzo 70x 5G", "Realme Narzo 60 Pro 5G", "Realme Narzo 60x 5G", "Realme Narzo 50 Pro 5G", "Realme Narzo 50", "Realme Narzo 30 5G",
-        "Realme C67 5G", "Realme C55", "Realme C53", "Realme C35", "Realme C33", "Realme C31", "Realme C25s"
+        "Google Pixel 9 Pro XL", "Google Pixel 9 Pro", "Google Pixel 9", "Google Pixel 9 Pro Fold",
+        "Google Pixel 8 Pro", "Google Pixel 8a", "Google Pixel 8",
+        "Google Pixel 7a", "Google Pixel 7 Pro", "Google Pixel 7",
+        "Google Pixel 6a", "Google Pixel 6 Pro", "Google Pixel 6"
       ],
       sensi: {
-        general: "192",
-        redDot: "185",
-        scope2x: "180",
-        scope4x: "175",
-        awm: "108",
-        freeLook: "160",
-        fireButton: "45%",
-        dpi: "430 DPI",
-        proTips: [
-          "Set Smallest Width (DPI) to 430 in Developer Options.",
-          "Enable Pro Gaming Mode in Game Assistant for 240Hz Touch Sampling.",
-          "Keep General at 192 for quick 360-degree drag rotation."
-        ]
-      }
-    },
-    {
-      id: "vivo",
-      name: "Vivo",
-      icon: "fa-solid fa-mobile-screen-button",
-      models: [
-        "Vivo V30 Pro", "Vivo V30", "Vivo V30e", "Vivo V29 Pro", "Vivo V29", "Vivo V29e", "Vivo V27 Pro", "Vivo V27", "Vivo V25 Pro", "Vivo V23 Pro",
-        "Vivo T3 5G", "Vivo T3x 5G", "Vivo T2 Pro 5G", "Vivo T2 5G", "Vivo T2x 5G", "Vivo T1 Pro 5G", "Vivo T1 5G",
-        "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y16", "Vivo Y21"
-      ],
-      sensi: {
-        general: "190",
-        redDot: "183",
-        scope2x: "178",
-        scope4x: "173",
-        awm: "106",
-        freeLook: "158",
-        fireButton: "45%",
-        dpi: "435 DPI",
-        proTips: [
-          "Set Smallest Width (DPI) to 435 in Funtouch OS Developer Options.",
-          "Enable Ultra Game Mode for peak touch response acceleration.",
-          "Set Fire Button at 45% positioned low for smooth upward drag headshots."
-        ]
-      }
-    },
-    {
-      id: "oneplus",
-      name: "OnePlus / iQOO",
-      icon: "fa-solid fa-bolt",
-      models: [
-        // OnePlus Series
-        "OnePlus 12", "OnePlus 12R", "OnePlus 11", "OnePlus 11R",
-        "OnePlus 10 Pro", "OnePlus 10T", "OnePlus 10R",
-        "OnePlus 9 Pro", "OnePlus 9RT", "OnePlus 9", "OnePlus 9R",
-        "OnePlus 8T", "OnePlus 8 Pro", "OnePlus 8", "OnePlus 7T Pro", "OnePlus 7T", "OnePlus 7 Pro",
-        "OnePlus Nord 4", "OnePlus Nord 3 5G", "OnePlus Nord 2T 5G", "OnePlus Nord 2 5G", "OnePlus Nord",
-        "OnePlus Nord CE 4 5G", "OnePlus Nord CE 3 5G", "OnePlus Nord CE 3 Lite 5G", "OnePlus Nord CE 2 5G", "OnePlus Nord CE 2 Lite",
-        // iQOO Series
-        "iQOO 12 Pro", "iQOO 12", "iQOO 11 5G", "iQOO 9 Pro", "iQOO 9T", "iQOO 9 5G", "iQOO 9 SE", "iQOO 7 Legend", "iQOO 7",
-        "iQOO Neo 9 Pro", "iQOO Neo 7 Pro", "iQOO Neo 7", "iQOO Neo 6",
-        "iQOO Z9 5G", "iQOO Z9x 5G", "iQOO Z7 Pro 5G", "iQOO Z7 5G", "iQOO Z7s 5G", "iQOO Z6 Pro 5G", "iQOO Z6 5G", "iQOO Z6 Lite 5G"
-      ],
-      sensi: {
-        general: "178",
-        redDot: "170",
-        scope2x: "165",
-        scope4x: "160",
+        general: "184",
+        redDot: "176",
+        scope2x: "170",
+        scope4x: "165",
         awm: "100",
         freeLook: "155",
-        fireButton: "44%",
-        dpi: "400 DPI",
+        fireButton: "43%",
+        dpi: "415 DPI",
         proTips: [
-          "OnePlus & iQOO have ultra-fast touch panels—keep DPI around 400.",
-          "Enable Ultra Touch / Instant Touch Sampling (1000Hz) in Gaming Space.",
-          "Fire button at 44% gives quick upward recoil lock."
+          "Pixel devices have smooth, unthrottled touch response.",
+          "Set Smallest Width (DPI) to 415 in Developer Options.",
+          "Turn ON 'Smooth Display' (90Hz/120Hz) for fluid drag control."
         ]
       }
     },
     {
       id: "infinix",
-      name: "Infinix / Tecno / Moto / Budget",
+      name: "Infinix / Tecno",
       icon: "fa-solid fa-microchip",
       models: [
         // Infinix Series
-        "Infinix GT 20 Pro", "Infinix GT 10 Pro",
+        "Infinix Zero 40 5G", "Infinix GT 20 Pro", "Infinix GT 10 Pro",
         "Infinix Note 40 Pro+ 5G", "Infinix Note 40 Pro 5G", "Infinix Note 40 5G", "Infinix Note 30 5G", "Infinix Note 30 VIP", "Infinix Note 12 Pro 5G", "Infinix Note 12 VIP", "Infinix Note 11 Pro", "Infinix Note 10 Pro",
         "Infinix Zero 30 5G", "Infinix Zero Ultra", "Infinix Zero 5G 2023", "Infinix Zero 20",
-        "Infinix Hot 40 Pro", "Infinix Hot 40i", "Infinix Hot 30 5G", "Infinix Hot 30i", "Infinix Hot 20 5G", "Infinix Hot 20 Play", "Infinix Hot 12 Pro", "Infinix Hot 12 Play", "Infinix Hot 11S", "Infinix Hot 10S",
+        "Infinix Hot 50 5G", "Infinix Hot 40 Pro", "Infinix Hot 40i", "Infinix Hot 30 5G", "Infinix Hot 30i", "Infinix Hot 20 5G", "Infinix Hot 20 Play", "Infinix Hot 12 Pro", "Infinix Hot 12 Play", "Infinix Hot 11S", "Infinix Hot 10S",
         "Infinix Smart 8 HD", "Infinix Smart 8 Pro", "Infinix Smart 7", "Infinix Smart 6",
         // Tecno Series
         "Tecno Camon 30 Premier 5G", "Tecno Camon 30 Pro 5G", "Tecno Camon 30 5G", "Tecno Camon 20 Pro 5G", "Tecno Camon 20 Premier", "Tecno Camon 19 Pro 5G",
         "Tecno Pova 6 Pro 5G", "Tecno Pova 5 Pro 5G", "Tecno Pova 5", "Tecno Pova 4 Pro", "Tecno Pova 3", "Tecno Pova 2",
-        "Tecno Spark 20 Pro+", "Tecno Spark 20 Pro", "Tecno Spark 20 5G", "Tecno Spark 10 Pro", "Tecno Spark 9 Pro", "Tecno Spark 8T", "Tecno Pop 8", "Tecno Pop 7 Pro",
-        // Motorola Series
-        "Moto Edge 50 Pro", "Moto Edge 50 Ultra", "Moto Edge 40 Neo", "Moto Edge 40", "Moto Edge 30 Ultra", "Moto Edge 30 Fusion", "Moto Edge 30 Pro", "Moto Edge 30",
-        "Moto G84 5G", "Moto G54 5G", "Moto G34 5G", "Moto G24 Power", "Moto G14", "Moto G82 5G", "Moto G73 5G", "Moto G62 5G", "Moto G52", "Moto G32", "Moto E13",
-        // Google Pixel
-        "Google Pixel 8 Pro", "Google Pixel 8a", "Google Pixel 8", "Google Pixel 7a", "Google Pixel 7 Pro", "Google Pixel 7", "Google Pixel 6a", "Google Pixel 6 Pro", "Google Pixel 6"
+        "Tecno Spark 30 Pro", "Tecno Spark 20 Pro+", "Tecno Spark 20 Pro", "Tecno Spark 20 5G", "Tecno Spark 10 Pro", "Tecno Spark 9 Pro", "Tecno Spark 8T", "Tecno Pop 8", "Tecno Pop 7 Pro"
       ],
       sensi: {
         general: "198",
@@ -301,7 +424,7 @@ const CONFIG = {
         // ASUS ROG Series
         "ASUS ROG Phone 8 Pro", "ASUS ROG Phone 8", "ASUS ROG Phone 7 Ultimate", "ASUS ROG Phone 7", "ASUS ROG Phone 6D Ultimate", "ASUS ROG Phone 6D", "ASUS ROG Phone 6 Pro", "ASUS ROG Phone 6", "ASUS ROG Phone 5s Pro", "ASUS ROG Phone 5s", "ASUS ROG Phone 5", "ASUS ROG Phone 3",
         // Nubia RedMagic Series
-        "Nubia RedMagic 9 Pro+", "Nubia RedMagic 9 Pro", "Nubia RedMagic 8S Pro+", "Nubia RedMagic 8S Pro", "Nubia RedMagic 8 Pro", "Nubia RedMagic 7S Pro", "Nubia RedMagic 7 Pro", "Nubia RedMagic 7", "Nubia RedMagic 6S Pro", "Nubia RedMagic 6 Pro",
+        "Nubia RedMagic 9S Pro+", "Nubia RedMagic 9S Pro", "Nubia RedMagic 9 Pro+", "Nubia RedMagic 9 Pro", "Nubia RedMagic 8S Pro+", "Nubia RedMagic 8S Pro", "Nubia RedMagic 8 Pro", "Nubia RedMagic 7S Pro", "Nubia RedMagic 7 Pro", "Nubia RedMagic 7", "Nubia RedMagic 6S Pro", "Nubia RedMagic 6 Pro",
         // Black Shark Series
         "Black Shark 5 Pro", "Black Shark 5 RS", "Black Shark 5", "Black Shark 4 Pro", "Black Shark 4S Pro", "Black Shark 4", "Black Shark 3 Pro", "Black Shark 3"
       ],
@@ -1042,9 +1165,9 @@ function getModelSensitivity(brandId, modelName, fallbackSensi) {
   }
   hash = Math.abs(hash);
 
-  const isUltraPro = /Pro Max|Ultra|GT 5|ROG|16 Pro|15 Pro|14 Pro|S24|S23|Fold|RedMagic/i.test(modelName);
-  const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V30|V29|T3|F31|F27|F25/i.test(modelName);
-  const isBudget = /A03|A04|A13|A14|C65|C55|13C|Hot|Smart|Spark|Pop|Y16|Y21|Play/i.test(modelName);
+  const isUltraPro = /Pro Max|Ultra|GT 5|GT 6|ROG|16 Pro|15 Pro|14 Pro|S24|S23|Fold|RedMagic|Z10 Pro|T4 Pro|Agni 3|Pura 70|Edge 50 Ultra|Pixel 9 Pro/i.test(modelName);
+  const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V40|V30|V29|T4|T3|F31|F27|F25|Z10|Z9|Agni|Edge|Blaze|Razr|Magic/i.test(modelName);
+  const isBudget = /A03|A04|A13|A14|C65|C55|13C|Hot|Smart|Spark|Pop|Y16|Y21|Play|Yuva|Blaze 2|E13|Lite/i.test(modelName);
 
   let baseGeneral, baseRedDot, baseScope2x, baseScope4x, baseAwm, baseFreeLook, baseFireButton, baseDpi;
 
@@ -1096,6 +1219,18 @@ function getModelSensitivity(brandId, modelName, fallbackSensi) {
 
   if (/OPPO/i.test(modelName) || brandId === "oppo") {
     tips[1] = `Turn ON Pro Gaming Mode in ColorOS Game Assistant for 240Hz Touch Sampling on ${modelName}.`;
+  } else if (/iQOO/i.test(modelName) || brandId === "iqoo") {
+    tips[1] = `Enable Monster Mode in iQOO Game Space for maximum touch response rate on ${modelName}.`;
+  } else if (/Vivo/i.test(modelName) || brandId === "vivo") {
+    tips[1] = `Turn ON Ultra Game Mode in Funtouch OS for peak touch response on ${modelName}.`;
+  } else if (/Lava/i.test(modelName) || brandId === "lava") {
+    tips[1] = `Set Fire Button size to ${baseFireButton}% with high drag velocity for Lava's 120Hz display on ${modelName}.`;
+  } else if (/Moto/i.test(modelName) || brandId === "motorola") {
+    tips[1] = `Enable Moto Gametime & 120Hz/144Hz high refresh rate mode for smooth drag lock on ${modelName}.`;
+  } else if (/Honor|Huawei/i.test(modelName) || brandId === "honor") {
+    tips[1] = `Enable Game Accelerator in Magic UI / EMUI settings for reduced touch latency on ${modelName}.`;
+  } else if (/Pixel/i.test(modelName) || brandId === "google") {
+    tips[1] = `Enable 'Smooth Display' in Display settings for maximum touch sampling on ${modelName}.`;
   } else if (/Nothing/i.test(modelName) || brandId === "nothing") {
     tips[1] = `Nothing OS features ultra-low latency—enable 120Hz display refresh rate for smooth drag tracking on ${modelName}.`;
   } else if (brandId === "apple") {
