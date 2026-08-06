@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RAGE OPTIMISATION - Free Fire Brand & Device Sensitivity Application
+   RAGE OPTIMISATION - Free Fire Exhaustive Brand & Device Sensitivity Application
    ========================================================================== */
 
 // Global Configuration & Sensitivity Data Matrix
@@ -8,13 +8,24 @@ const CONFIG = {
   WHATSAPP_URL: "https://whatsapp.com/channel/0029Vb6Bqn8FCCoW6zjffR3j",
   DISCORD_URL: "https://discord.gg/JdvKrCHnMJ",
 
-  // Mobile Device Brands & Models Matrix with Calibrated 200% Scale Presets
+  // Mobile Device Brands & Exhaustive Model Matrix
   MOBILE_BRANDS: [
     {
       id: "apple",
-      name: "Apple (iPhone)",
+      name: "Apple (iPhone / iPad)",
       icon: "fa-brands fa-apple",
-      models: ["iPhone 11 / 11 Pro", "iPhone 12 / 12 Pro", "iPhone 13 / 13 Pro", "iPhone 14 / 14 Pro", "iPhone 15 / 15 Pro", "iPhone 16 / 16 Pro", "iPhone XR / XS / X", "Other iPhone Model"],
+      models: [
+        "iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16",
+        "iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15",
+        "iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 Plus", "iPhone 14",
+        "iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 Mini",
+        "iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 Mini",
+        "iPhone 11 Pro Max", "iPhone 11 Pro", "iPhone 11",
+        "iPhone XS Max", "iPhone XS", "iPhone XR", "iPhone X",
+        "iPhone 8 Plus", "iPhone 8", "iPhone 7 Plus", "iPhone 7",
+        "iPhone SE (2022)", "iPhone SE (2020)",
+        "iPad Pro 12.9 (M1/M2/M4)", "iPad Pro 11 (M1/M2/M4)", "iPad Air (M1/M2)", "iPad Mini 6", "iPad 10th Gen", "iPad 9th Gen"
+      ],
       sensi: {
         general: "172",
         redDot: "165",
@@ -23,11 +34,11 @@ const CONFIG = {
         awm: "95",
         freeLook: "150",
         fireButton: "42%",
-        dpi: "Default (iOS Curves)",
+        dpi: "Default (iOS Touch Curves)",
         proTips: [
-          "iOS has built-in smooth touch acceleration—no DPI modification needed.",
-          "Keep Fire Button size at 42% positioned slightly lower for clean drag upward.",
-          "Enable 120Hz ProMotion in iOS Settings for instant headshot response."
+          "iOS has native smooth touch acceleration—no DPI modification required.",
+          "Set Fire Button size to 42% positioned slightly lower for clean drag upward.",
+          "Enable 120Hz ProMotion in iOS Settings for instant drag headshot response."
         ]
       }
     },
@@ -35,7 +46,22 @@ const CONFIG = {
       id: "xiaomi",
       name: "Xiaomi / POCO / Redmi",
       icon: "fa-solid fa-mobile-screen-button",
-      models: ["POCO X3 / X4 / X5 / X6 Pro", "POCO F3 / F4 / F5 / F6", "Redmi Note 10 / 11 / 12 / 13 Pro", "Xiaomi 11T / 12T / 13T / 14", "Redmi 9A / 10C / 12", "Other POCO/Redmi Model"],
+      models: [
+        // POCO Series
+        "POCO X6 Pro 5G", "POCO X6 5G", "POCO X5 Pro 5G", "POCO X5 5G", "POCO X4 Pro 5G", "POCO X3 Pro", "POCO X3 NFC", "POCO X3",
+        "POCO F6 Pro", "POCO F6", "POCO F5 Pro", "POCO F5", "POCO F4 5G", "POCO F3 GT", "POCO F3",
+        "POCO M6 Pro 5G", "POCO M6 5G", "POCO M5", "POCO M4 Pro 5G", "POCO M3 Pro 5G", "POCO C65", "POCO C55", "POCO C51",
+        // Redmi Note Series
+        "Redmi Note 13 Pro+ 5G", "Redmi Note 13 Pro 5G", "Redmi Note 13 5G", "Redmi Note 13 4G",
+        "Redmi Note 12 Pro+ 5G", "Redmi Note 12 Pro 5G", "Redmi Note 12 5G", "Redmi Note 12 4G", "Redmi Note 12 Turbo",
+        "Redmi Note 11 Pro+ 5G", "Redmi Note 11 Pro 5G", "Redmi Note 11S", "Redmi Note 11",
+        "Redmi Note 10 Pro Max", "Redmi Note 10 Pro", "Redmi Note 10S", "Redmi Note 10", "Redmi Note 10T 5G",
+        "Redmi Note 9 Pro Max", "Redmi Note 9 Pro", "Redmi Note 9S", "Redmi Note 9", "Redmi Note 8 Pro", "Redmi Note 8",
+        // Redmi Budget & Xiaomi Flagships
+        "Redmi 13C 5G", "Redmi 13C", "Redmi 12 5G", "Redmi 12", "Redmi 11 Prime 5G", "Redmi 10C", "Redmi 10", "Redmi 9A", "Redmi 9C", "Redmi A3", "Redmi A2+",
+        "Xiaomi 14 Ultra", "Xiaomi 14 Pro", "Xiaomi 14", "Xiaomi 13T Pro", "Xiaomi 13T", "Xiaomi 13 Pro", "Xiaomi 13 Ultra",
+        "Xiaomi 12T Pro", "Xiaomi 12 Pro", "Xiaomi 12X", "Xiaomi 11T Pro", "Xiaomi Mi 11X Pro", "Xiaomi Mi 11X", "Xiaomi Mi 10i"
+      ],
       sensi: {
         general: "194",
         redDot: "188",
@@ -46,9 +72,9 @@ const CONFIG = {
         fireButton: "48%",
         dpi: "490 DPI",
         proTips: [
-          "Set Smallest Width (DPI) to 490 in MIUI Developer Options.",
-          "Turn ON Game Turbo mode and set Touch Response Speed to Maximum.",
-          "Use a smooth sliding thumb sleeve for quick headshot drags."
+          "Set Smallest Width (DPI) to 490 in MIUI / HyperOS Developer Options.",
+          "Turn ON Game Turbo mode and set Touch Response & Sensitivity to Maximum.",
+          "Use smooth thumb sleeves for fast upward drag speed."
         ]
       }
     },
@@ -56,7 +82,24 @@ const CONFIG = {
       id: "samsung",
       name: "Samsung Galaxy",
       icon: "fa-solid fa-mobile-retro",
-      models: ["Galaxy S21 / S22 / S23 / S24 Ultra", "Galaxy A12 / A14 / A23 / A34 / A54", "Galaxy M13 / M33 / M54", "Galaxy FE Series (S20/S21/S23 FE)", "Other Samsung Galaxy Model"],
+      models: [
+        // S-Series Flagships
+        "Galaxy S24 Ultra", "Galaxy S24+", "Galaxy S24",
+        "Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy S23 FE",
+        "Galaxy S22 Ultra", "Galaxy S22+", "Galaxy S22",
+        "Galaxy S21 Ultra", "Galaxy S21+", "Galaxy S21", "Galaxy S21 FE 5G",
+        "Galaxy S20 Ultra", "Galaxy S20+", "Galaxy S20", "Galaxy S20 FE 5G", "Galaxy S10+", "Galaxy S10", "Galaxy S9+",
+        // A-Series
+        "Galaxy A55 5G", "Galaxy A54 5G", "Galaxy A53 5G", "Galaxy A52s 5G", "Galaxy A52 5G", "Galaxy A52", "Galaxy A51",
+        "Galaxy A35 5G", "Galaxy A34 5G", "Galaxy A33 5G", "Galaxy A32 5G", "Galaxy A32",
+        "Galaxy A25 5G", "Galaxy A24", "Galaxy A23 5G", "Galaxy A23", "Galaxy A22 5G",
+        "Galaxy A15 5G", "Galaxy A14 5G", "Galaxy A14", "Galaxy A13", "Galaxy A12", "Galaxy A05s", "Galaxy A04s", "Galaxy A03s",
+        // M & F Series
+        "Galaxy M55 5G", "Galaxy M54 5G", "Galaxy M53 5G", "Galaxy M52 5G", "Galaxy M34 5G", "Galaxy M33 5G", "Galaxy M32 5G",
+        "Galaxy M14 5G", "Galaxy M13 5G", "Galaxy M12", "Galaxy F54 5G", "Galaxy F34 5G", "Galaxy F14 5G", "Galaxy F23 5G",
+        // Z-Series Foldables
+        "Galaxy Z Fold 5", "Galaxy Z Fold 4", "Galaxy Z Fold 3", "Galaxy Z Flip 5", "Galaxy Z Flip 4"
+      ],
       sensi: {
         general: "188",
         redDot: "182",
@@ -67,9 +110,9 @@ const CONFIG = {
         fireButton: "46%",
         dpi: "450 DPI",
         proTips: [
-          "Enable 'Touch Sensitivity' mode in Display settings for smooth drags.",
-          "Set Game Booster Plugin touch response tuning to High.",
-          "Position Fire Button size at 46% near the lower right quadrant."
+          "Enable 'Touch Sensitivity' mode in One UI Display settings.",
+          "Set Game Booster touch optimization plugins to High Performance.",
+          "Fire Button size at 46% positioned near the lower right quadrant."
         ]
       }
     },
@@ -77,7 +120,25 @@ const CONFIG = {
       id: "realme",
       name: "Realme / OPPO / Vivo",
       icon: "fa-solid fa-mobile",
-      models: ["Realme 8 / 9 / 10 / 11 / 12 Pro", "Realme GT Neo / GT 2 / GT 5", "OPPO Reno 7 / 8 / 10 / 11", "Vivo T1 / T2 / V27 / V29 / V30", "Other Realme/OPPO/Vivo"],
+      models: [
+        // Realme Series
+        "Realme 12 Pro+ 5G", "Realme 12 Pro 5G", "Realme 12+ 5G", "Realme 12 5G", "Realme 12x 5G",
+        "Realme 11 Pro+ 5G", "Realme 11 Pro 5G", "Realme 11 5G", "Realme 11x 5G",
+        "Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 10 5G", "Realme 10",
+        "Realme 9 Pro+ 5G", "Realme 9 Pro 5G", "Realme 9i 5G", "Realme 9 5G", "Realme 8 Pro", "Realme 8 5G", "Realme 8", "Realme 7 Pro",
+        "Realme GT 5 Pro", "Realme GT 5", "Realme GT 3", "Realme GT 2 Pro", "Realme GT 2", "Realme GT Neo 6 SE", "Realme GT Neo 5", "Realme GT Neo 3T", "Realme GT Neo 3", "Realme GT Neo 2", "Realme GT Master Edition",
+        "Realme Narzo 70 Pro 5G", "Realme Narzo 70x 5G", "Realme Narzo 60 Pro 5G", "Realme Narzo 60x 5G", "Realme Narzo 50 Pro 5G", "Realme Narzo 50", "Realme Narzo 30 5G",
+        "Realme C67 5G", "Realme C55", "Realme C53", "Realme C35", "Realme C33", "Realme C31", "Realme C25s",
+        // OPPO Series
+        "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
+        "OPPO Reno 8 Pro 5G", "OPPO Reno 8 5G", "OPPO Reno 7 Pro 5G", "OPPO Reno 6 Pro 5G",
+        "OPPO F25 Pro 5G", "OPPO F23 5G", "OPPO F21s Pro 5G", "OPPO F21 Pro 5G", "OPPO F19 Pro+ 5G",
+        "OPPO A79 5G", "OPPO A59 5G", "OPPO A78 5G", "OPPO A58 5G", "OPPO A38", "OPPO A18", "OPPO A17",
+        // Vivo Series
+        "Vivo V30 Pro", "Vivo V30", "Vivo V30e", "Vivo V29 Pro", "Vivo V29", "Vivo V29e", "Vivo V27 Pro", "Vivo V27", "Vivo V25 Pro", "Vivo V23 Pro",
+        "Vivo T3 5G", "Vivo T3x 5G", "Vivo T2 Pro 5G", "Vivo T2 5G", "Vivo T2x 5G", "Vivo T1 Pro 5G", "Vivo T1 5G",
+        "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y16", "Vivo Y21"
+      ],
       sensi: {
         general: "192",
         redDot: "185",
@@ -89,8 +150,8 @@ const CONFIG = {
         dpi: "430 DPI",
         proTips: [
           "Set Smallest Width (DPI) to 430 in Developer Options.",
-          "Turn on Pro Gaming Mode in Game Assistant for 240Hz Touch Rate.",
-          "Keep General sensitivity high (192) for fast 360-degree drag rotation."
+          "Enable Pro Gaming Mode in Game Assistant for 240Hz Touch Sampling.",
+          "Keep General at 192 for quick 360-degree drag rotation."
         ]
       }
     },
@@ -98,7 +159,19 @@ const CONFIG = {
       id: "oneplus",
       name: "OnePlus / iQOO",
       icon: "fa-solid fa-bolt",
-      models: ["OnePlus 9 / 10 / 11 / 12 Pro", "OnePlus Nord 2 / 3 / CE series", "iQOO 7 / 9 / 11 / 12 Pro", "iQOO Neo 6 / 7 / 9 Pro", "Other OnePlus/iQOO Model"],
+      models: [
+        // OnePlus Series
+        "OnePlus 12", "OnePlus 12R", "OnePlus 11", "OnePlus 11R",
+        "OnePlus 10 Pro", "OnePlus 10T", "OnePlus 10R",
+        "OnePlus 9 Pro", "OnePlus 9RT", "OnePlus 9", "OnePlus 9R",
+        "OnePlus 8T", "OnePlus 8 Pro", "OnePlus 8", "OnePlus 7T Pro", "OnePlus 7T", "OnePlus 7 Pro",
+        "OnePlus Nord 4", "OnePlus Nord 3 5G", "OnePlus Nord 2T 5G", "OnePlus Nord 2 5G", "OnePlus Nord",
+        "OnePlus Nord CE 4 5G", "OnePlus Nord CE 3 5G", "OnePlus Nord CE 3 Lite 5G", "OnePlus Nord CE 2 5G", "OnePlus Nord CE 2 Lite",
+        // iQOO Series
+        "iQOO 12 Pro", "iQOO 12", "iQOO 11 5G", "iQOO 9 Pro", "iQOO 9T", "iQOO 9 5G", "iQOO 9 SE", "iQOO 7 Legend", "iQOO 7",
+        "iQOO Neo 9 Pro", "iQOO Neo 7 Pro", "iQOO Neo 7", "iQOO Neo 6",
+        "iQOO Z9 5G", "iQOO Z9x 5G", "iQOO Z7 Pro 5G", "iQOO Z7 5G", "iQOO Z7s 5G", "iQOO Z6 Pro 5G", "iQOO Z6 5G", "iQOO Z6 Lite 5G"
+      ],
       sensi: {
         general: "178",
         redDot: "170",
@@ -109,17 +182,33 @@ const CONFIG = {
         fireButton: "44%",
         dpi: "400 DPI",
         proTips: [
-          "iQOO & OnePlus have ultra-fast touch response—keep DPI around 400.",
-          "Enable Instant Touch Sampling (1000Hz) in Gaming Space.",
+          "OnePlus & iQOO have ultra-fast touch panels—keep DPI around 400.",
+          "Enable Ultra Touch / Instant Touch Sampling (1000Hz) in Gaming Space.",
           "Fire button at 44% gives quick upward recoil lock."
         ]
       }
     },
     {
       id: "infinix",
-      name: "Infinix / Tecno / Budget",
+      name: "Infinix / Tecno / Moto / Budget",
       icon: "fa-solid fa-microchip",
-      models: ["Infinix Hot 10 / 11 / 12 / 20 / 30", "Infinix Note 11 / 12 / 30 Pro", "Tecno Spark 8 / 9 / 10 / Pova", "Lava / Micromax / Budget Phones", "Other Budget Device"],
+      models: [
+        // Infinix Series
+        "Infinix GT 20 Pro", "Infinix GT 10 Pro",
+        "Infinix Note 40 Pro+ 5G", "Infinix Note 40 Pro 5G", "Infinix Note 40 5G", "Infinix Note 30 5G", "Infinix Note 30 VIP", "Infinix Note 12 Pro 5G", "Infinix Note 12 VIP", "Infinix Note 11 Pro", "Infinix Note 10 Pro",
+        "Infinix Zero 30 5G", "Infinix Zero Ultra", "Infinix Zero 5G 2023", "Infinix Zero 20",
+        "Infinix Hot 40 Pro", "Infinix Hot 40i", "Infinix Hot 30 5G", "Infinix Hot 30i", "Infinix Hot 20 5G", "Infinix Hot 20 Play", "Infinix Hot 12 Pro", "Infinix Hot 12 Play", "Infinix Hot 11S", "Infinix Hot 10S",
+        "Infinix Smart 8 HD", "Infinix Smart 8 Pro", "Infinix Smart 7", "Infinix Smart 6",
+        // Tecno Series
+        "Tecno Camon 30 Premier 5G", "Tecno Camon 30 Pro 5G", "Tecno Camon 30 5G", "Tecno Camon 20 Pro 5G", "Tecno Camon 20 Premier", "Tecno Camon 19 Pro 5G",
+        "Tecno Pova 6 Pro 5G", "Tecno Pova 5 Pro 5G", "Tecno Pova 5", "Tecno Pova 4 Pro", "Tecno Pova 3", "Tecno Pova 2",
+        "Tecno Spark 20 Pro+", "Tecno Spark 20 Pro", "Tecno Spark 20 5G", "Tecno Spark 10 Pro", "Tecno Spark 9 Pro", "Tecno Spark 8T", "Tecno Pop 8", "Tecno Pop 7 Pro",
+        // Motorola Series
+        "Moto Edge 50 Pro", "Moto Edge 50 Ultra", "Moto Edge 40 Neo", "Moto Edge 40", "Moto Edge 30 Ultra", "Moto Edge 30 Fusion", "Moto Edge 30 Pro", "Moto Edge 30",
+        "Moto G84 5G", "Moto G54 5G", "Moto G34 5G", "Moto G24 Power", "Moto G14", "Moto G82 5G", "Moto G73 5G", "Moto G62 5G", "Moto G52", "Moto G32", "Moto E13",
+        // Google Pixel
+        "Google Pixel 8 Pro", "Google Pixel 8a", "Google Pixel 8", "Google Pixel 7a", "Google Pixel 7 Pro", "Google Pixel 7", "Google Pixel 6a", "Google Pixel 6 Pro", "Google Pixel 6"
+      ],
       sensi: {
         general: "198",
         redDot: "195",
@@ -130,17 +219,24 @@ const CONFIG = {
         fireButton: "50%",
         dpi: "520 DPI",
         proTips: [
-          "Budget devices need high DPI (520) to compensate for screen latency.",
-          "Clear RAM background apps before launching Free Fire.",
-          "Use General at 198 for maximum drag velocity on 60Hz panels."
+          "Budget & standard devices need high DPI (520) to compensate for touch latency.",
+          "Clear background RAM before launching Free Fire.",
+          "Use General at 198 for maximum drag velocity on 60Hz-90Hz panels."
         ]
       }
     },
     {
       id: "gaming",
-      name: "ASUS ROG / Gaming Phone",
+      name: "ASUS ROG / Gaming Phones",
       icon: "fa-solid fa-gamepad",
-      models: ["ASUS ROG Phone 5 / 6 / 7 / 8", "RedMagic 6 / 7 / 8 / 9 Pro", "Black Shark 4 / 5 Pro", "Other Pro Gaming Phone"],
+      models: [
+        // ASUS ROG Series
+        "ASUS ROG Phone 8 Pro", "ASUS ROG Phone 8", "ASUS ROG Phone 7 Ultimate", "ASUS ROG Phone 7", "ASUS ROG Phone 6D Ultimate", "ASUS ROG Phone 6D", "ASUS ROG Phone 6 Pro", "ASUS ROG Phone 6", "ASUS ROG Phone 5s Pro", "ASUS ROG Phone 5s", "ASUS ROG Phone 5", "ASUS ROG Phone 3",
+        // Nubia RedMagic Series
+        "Nubia RedMagic 9 Pro+", "Nubia RedMagic 9 Pro", "Nubia RedMagic 8S Pro+", "Nubia RedMagic 8S Pro", "Nubia RedMagic 8 Pro", "Nubia RedMagic 7S Pro", "Nubia RedMagic 7 Pro", "Nubia RedMagic 7", "Nubia RedMagic 6S Pro", "Nubia RedMagic 6 Pro",
+        // Black Shark Series
+        "Black Shark 5 Pro", "Black Shark 5 RS", "Black Shark 5", "Black Shark 4 Pro", "Black Shark 4S Pro", "Black Shark 4", "Black Shark 3 Pro", "Black Shark 3"
+      ],
       sensi: {
         general: "168",
         redDot: "160",
@@ -151,9 +247,9 @@ const CONFIG = {
         fireButton: "40%",
         dpi: "380 DPI",
         proTips: [
-          "Esports gaming phones have 720Hz+ touch sampling rate.",
-          "Set AirTriggers for fast Scope + Fire combo.",
-          "Lower sensitivity (168) provides laser-like headshot precision."
+          "Esports gaming phones feature 720Hz+ touch sampling rate.",
+          "Set AirTriggers for fast Scope + Fire combo setup.",
+          "Lower sensitivity (168) provides laser-like drag headshot precision."
         ]
       }
     }
@@ -226,8 +322,8 @@ const CONFIG = {
 const state = {
   currentStep: 1,
   selectedPlatform: null, // 'mobile' | 'pc'
-  selectedMobileBrand: "xiaomi", // Default brand
-  selectedMobileModel: "POCO X3 / X4 / X5 / X6 Pro", // Default model
+  selectedMobileBrand: "apple", // Default brand
+  selectedMobileModel: "iPhone 15 Pro Max", // Default model
   selectedPcTier: "mid", // Default PC tier
   verifiedYt: false,
   verifiedWa: false,
@@ -445,7 +541,7 @@ function renderSpecTierScreen(platform) {
 
   if (platform === "mobile") {
     elements.specTitle.innerText = "SELECT YOUR PHONE BRAND & MODEL";
-    elements.specSubtitle.innerText = "Choose your device brand and model to fetch pro headshot sensitivities from net.";
+    elements.specSubtitle.innerText = "Filter or pick your exact mobile model to fetch community-calibrated pro sensitivities.";
 
     // Render Brand Tabs & Model Selection View
     const brandContainer = document.createElement("div");
@@ -470,19 +566,22 @@ function renderSpecTierScreen(platform) {
 
     brandContainer.appendChild(brandPillsGrid);
 
-    // 2. Models Selection Box for Active Brand
+    // 2. Models Selection Box for Active Brand with Live Search Filter
     const activeBrand = CONFIG.MOBILE_BRANDS.find((b) => b.id === state.selectedMobileBrand) || CONFIG.MOBILE_BRANDS[0];
     
     const modelCard = document.createElement("div");
     modelCard.className = "model-selector-card";
     modelCard.innerHTML = `
       <div class="model-card-header">
-        <i class="${activeBrand.icon}"></i> <strong>${activeBrand.name} Models</strong>
+        <i class="${activeBrand.icon}"></i> <strong>${activeBrand.name} Models (${activeBrand.models.length}+ Devices)</strong>
       </div>
-      <p class="model-card-sub">Select your exact model or nearest series:</p>
+      <div class="search-model-wrapper">
+        <input type="text" id="search-model-input" placeholder="🔍 Search any iPhone or Android model (e.g. Poco X3, S24 Ultra, iPhone 15...)" />
+      </div>
+      <p class="model-card-sub">Tap your exact phone model below:</p>
       <div class="model-pills-grid" id="model-pills-grid"></div>
       <div class="custom-model-wrapper">
-        <label for="custom-model-input">Or Type Custom Model:</label>
+        <label for="custom-model-input">Selected Model / Type Custom:</label>
         <input type="text" id="custom-model-input" placeholder="e.g. Poco X3 Pro, Galaxy A52..." value="${state.selectedMobileModel}" />
       </div>
       <button class="cta-button-primary" id="btn-confirm-mobile-device" style="margin-top: 1rem; width: 100%;">
@@ -493,25 +592,63 @@ function renderSpecTierScreen(platform) {
     brandContainer.appendChild(modelCard);
     elements.specGrid.appendChild(brandContainer);
 
-    // Populate model pills
+    // Populate model pills with search filter logic
     const modelPillsGrid = document.getElementById("model-pills-grid");
-    activeBrand.models.forEach((m) => {
-      const isSelected = m === state.selectedMobileModel;
-      const pill = document.createElement("div");
-      pill.className = `model-pill ${isSelected ? "selected" : ""}`;
-      pill.innerText = m;
-      pill.addEventListener("click", () => {
-        state.selectedMobileModel = m;
-        const customInput = document.getElementById("custom-model-input");
-        if (customInput) customInput.value = m;
-        document.querySelectorAll(".model-pill").forEach(p => p.classList.remove("selected"));
-        pill.classList.add("selected");
+    const searchInput = document.getElementById("search-model-input");
+    const customInput = document.getElementById("custom-model-input");
+
+    function populateModelPills(filterQuery = "") {
+      modelPillsGrid.innerHTML = "";
+      const query = filterQuery.toLowerCase().trim();
+
+      let targetModels = activeBrand.models;
+
+      // If user typed search query, search across ALL brands' models if needed!
+      if (query.length > 0) {
+        let matched = activeBrand.models.filter((m) => m.toLowerCase().includes(query));
+        if (matched.length === 0) {
+          // Fallback to searching all brands
+          CONFIG.MOBILE_BRANDS.forEach(b => {
+            b.models.forEach(m => {
+              if (m.toLowerCase().includes(query) && !matched.includes(m)) {
+                matched.push(m);
+              }
+            });
+          });
+        }
+        targetModels = matched;
+      }
+
+      if (targetModels.length === 0) {
+        modelPillsGrid.innerHTML = `<div class="no-model-found">No exact match found. Type custom name in box below!</div>`;
+        return;
+      }
+
+      targetModels.forEach((m) => {
+        const isSelected = m === state.selectedMobileModel;
+        const pill = document.createElement("div");
+        pill.className = `model-pill ${isSelected ? "selected" : ""}`;
+        pill.innerText = m;
+        pill.addEventListener("click", () => {
+          state.selectedMobileModel = m;
+          if (customInput) customInput.value = m;
+          document.querySelectorAll(".model-pill").forEach(p => p.classList.remove("selected"));
+          pill.classList.add("selected");
+        });
+        modelPillsGrid.appendChild(pill);
       });
-      modelPillsGrid.appendChild(pill);
-    });
+    }
+
+    populateModelPills();
+
+    // Live search input listener
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        populateModelPills(e.target.value);
+      });
+    }
 
     // Custom model input handler
-    const customInput = document.getElementById("custom-model-input");
     if (customInput) {
       customInput.addEventListener("input", (e) => {
         if (e.target.value.trim()) {

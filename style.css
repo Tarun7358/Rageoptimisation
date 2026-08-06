@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RAGE OPTIMISATION - UMP Recoil Fix Reg Download & VIP Discord Styles
+   RAGE OPTIMISATION - Exhaustive Mobile Model List & Search Styles
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -496,7 +496,7 @@ p, span, div {
 }
 
 /* --------------------------------------------------------------------------
-   7. Step 2 & 2.5: Mobile Brands & Device Selection
+   7. Step 2 & 2.5: Mobile Brands & Exhaustive Device Selection
    -------------------------------------------------------------------------- */
 .screen-header {
   text-align: center;
@@ -639,6 +639,31 @@ p, span, div {
   gap: 0.4rem;
 }
 
+.search-model-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+#search-model-input {
+  background: rgba(10, 10, 15, 0.85);
+  border: 1px solid rgba(255, 77, 46, 0.4);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 0.85rem;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+#search-model-input:focus {
+  border-color: var(--accent-fire);
+  box-shadow: 0 0 12px var(--accent-fire-glow);
+}
+
 .model-card-sub {
   font-size: 0.75rem;
   color: var(--text-muted);
@@ -648,6 +673,24 @@ p, span, div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+/* Custom Scrollbar for Model Grid */
+.model-pills-grid::-webkit-scrollbar {
+  width: 5px;
+}
+
+.model-pills-grid::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-full);
+}
+
+.model-pills-grid::-webkit-scrollbar-thumb {
+  background: var(--accent-fire);
+  border-radius: var(--radius-full);
 }
 
 .model-pill {
@@ -671,6 +714,15 @@ p, span, div {
   border-color: var(--accent-fire);
   color: #ffffff;
   font-weight: 600;
+}
+
+.no-model-found {
+  font-size: 0.78rem;
+  color: var(--accent-yellow);
+  padding: 0.5rem 0;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
 }
 
 .custom-model-wrapper {
