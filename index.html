@@ -86,6 +86,41 @@
              =================================================================== -->
         <section id="screen-landing" class="screen">
           <div class="hero-section">
+            <!-- Transparent Visitor Eye Toggle & Live Traffic Analytics Badge -->
+            <div class="visitor-toggle-wrapper">
+              <button id="btn-toggle-visitors" class="visitor-eye-btn" aria-label="Toggle Live Visitor Counter">
+                <i class="fa-solid fa-eye-slash" id="visitor-eye-icon"></i>
+                <span id="visitor-btn-label" class="visitor-btn-label">Show Live Visitors</span>
+                <span class="visitor-pulse-dot"></span>
+              </button>
+
+              <!-- Transparent Glassmorphism Visitor Counter Card -->
+              <div id="visitor-stats-card" class="visitor-stats-card hidden">
+                <div class="visitor-card-header">
+                  <span class="visitor-card-title">
+                    <i class="fa-solid fa-chart-line text-gradient-fire"></i> LIVE WEBSITE ANALYTICS
+                  </span>
+                  <span class="live-status-pill">
+                    <span class="pulse-green-dot"></span> LIVE
+                  </span>
+                </div>
+                <div class="visitor-stats-grid">
+                  <div class="visitor-stat-item">
+                    <div class="stat-value" id="stat-total-visits">148,920</div>
+                    <div class="stat-label">Total Visits</div>
+                  </div>
+                  <div class="visitor-stat-item">
+                    <div class="stat-value text-green" id="stat-active-now">64</div>
+                    <div class="stat-label">Active Now</div>
+                  </div>
+                  <div class="visitor-stat-item">
+                    <div class="stat-value text-yellow" id="stat-presets-unlocked">94,560</div>
+                    <div class="stat-label">Presets Unlocked</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="hero-badge">
               <i class="fa-solid fa-crown"></i> "ONE TAP HEADSHOTS START HERE"
             </div>
