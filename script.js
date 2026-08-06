@@ -262,18 +262,18 @@ const CONFIG = {
       desc: "2-4 Cores CPU, Integrated / GT 1030 GPU, 4-8GB RAM",
       badge: "Low-End Spec",
       badgeClass: "low",
-      general: "180",
-      redDot: "175",
-      scope2x: "165",
-      scope4x: "160",
-      awm: "100",
+      general: "0",
+      redDot: "0",
+      scope2x: "0",
+      scope4x: "0",
+      awm: "0",
       mouseY: "2.85",
       mouseX: "1.45",
       dpi: "1000 DPI",
       proTips: [
+        "In-game sensitivity is set to 0 to eliminate emulator pixel acceleration & drag glitch.",
         "Higher Y-Sensitivity (2.85) helps compensate for 45-60 FPS emulator lag.",
-        "Set BlueStacks 5 resolution to 1280x720 (Low DPI).",
-        "Enable ASTC Textures to 'Disabled' for higher FPS stability."
+        "Set BlueStacks 5 resolution to 1280x720 (Low DPI)."
       ]
     },
     mid: {
@@ -282,18 +282,18 @@ const CONFIG = {
       badge: "Balanced Rigs",
       badgeClass: "mid",
       recommended: true,
-      general: "165",
-      redDot: "160",
-      scope2x: "150",
-      scope4x: "145",
-      awm: "90",
+      general: "0",
+      redDot: "0",
+      scope2x: "0",
+      scope4x: "0",
+      awm: "0",
       mouseY: "2.45",
       mouseX: "1.25",
       dpi: "800 DPI",
       proTips: [
+        "In-game sensitivity is set to 0 to eliminate emulator pixel acceleration & drag glitch.",
         "Balanced Y-Sensitivity (2.45) offers crisp drag headshots at 90 FPS.",
-        "Use BlueStacks 5 Pie 64-bit instance with 4 Cores + 4GB RAM allocated.",
-        "Disable 'Enhance Pointer Precision' in Windows Mouse Settings."
+        "Use BlueStacks 5 Pie 64-bit instance with 4 Cores + 4GB RAM allocated."
       ]
     },
     high: {
@@ -301,17 +301,17 @@ const CONFIG = {
       desc: "8+ Cores i7/i9/Ryzen 7, RTX 3070+, 32GB RAM, 144Hz-240Hz",
       badge: "Esports Rig",
       badgeClass: "high",
-      general: "152",
-      redDot: "145",
-      scope2x: "140",
-      scope4x: "135",
-      awm: "80",
+      general: "0",
+      redDot: "0",
+      scope2x: "0",
+      scope4x: "0",
+      awm: "0",
       mouseY: "2.10",
       mouseX: "1.10",
       dpi: "800 / 1200 DPI",
       proTips: [
+        "In-game sensitivity is set to 0 to eliminate emulator pixel acceleration & drag glitch.",
         "Ultra-smooth 120-240 FPS allows low Y-sens (2.10) for pixel-perfect headshots.",
-        "Set Emulator display to 240Hz mode with High Frame Rate enabled.",
         "Use 1000Hz Mouse Polling Rate for zero mouse latency."
       ]
     }
