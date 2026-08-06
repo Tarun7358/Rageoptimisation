@@ -385,6 +385,8 @@ function cacheDOMElements() {
   elements.btnCopy = document.getElementById("btn-copy");
   elements.btnSaveImage = document.getElementById("btn-save-image");
   elements.unlockedCard = document.getElementById("unlockedCard");
+  elements.btnDownloadReg = document.getElementById("btn-download-reg");
+  elements.regCard = document.getElementById("reg-download-card");
 }
 
 function attachEventListeners() {
@@ -755,6 +757,10 @@ function renderUnlockScreen() {
   let sensiData = null;
 
   if (state.selectedPlatform === "mobile") {
+    // Hide PC-only Registry tweak elements for Mobile users
+    if (elements.btnDownloadReg) elements.btnDownloadReg.style.display = "none";
+    if (elements.regCard) elements.regCard.style.display = "none";
+
     const activeBrand = CONFIG.MOBILE_BRANDS.find((b) => b.id === state.selectedMobileBrand) || CONFIG.MOBILE_BRANDS[0];
     sensiData = activeBrand.sensi;
 
@@ -787,6 +793,10 @@ function renderUnlockScreen() {
     renderProTips(sensiData.proTips);
 
   } else {
+    // Show Registry tweak elements for PC users
+    if (elements.btnDownloadReg) elements.btnDownloadReg.style.display = "inline-flex";
+    if (elements.regCard) elements.regCard.style.display = "flex";
+
     // PC Emulator Sensitivity
     sensiData = CONFIG.SENSITIVITY_PC[state.selectedPcTier] || CONFIG.SENSITIVITY_PC.mid;
 
