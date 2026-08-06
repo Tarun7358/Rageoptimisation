@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/UMP_RECOIL_FIX.reg"
+  [headers.values]
+    Content-Type = "application/octet-stream"
+    Content-Disposition = "attachment; filename=\"UMP_RECOIL_FIX.reg\""
