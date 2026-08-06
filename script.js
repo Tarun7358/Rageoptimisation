@@ -997,36 +997,34 @@ function showToast(message) {
 }
 
 /* --------------------------------------------------------------------------
-   Real-Time Global Visitor Analytics Counter
+   100% Real-Time Global Visitor Tracking Engine (Atomic CounterAPI)
    -------------------------------------------------------------------------- */
 async function initVisitorCounter() {
-  const BASE_OFFSET = 145; // Real-time baseline count starting from 145
-  let totalVisits = BASE_OFFSET;
+  const BASE_OFFSET = 145; // Baseline count starting at 145
+
+  // Increment real hit counter once per unique visitor session
+  const isNewSession = !sessionStorage.getItem("v_counted");
+  const endpoint = isNewSession
+    ? "https://api.counterapi.dev/v1/rageoptimisation_ff_prod/visits/up"
+    : "https://api.counterapi.dev/v1/rageoptimisation_ff_prod/visits";
+
+  if (isNewSession) {
+    sessionStorage.setItem("v_counted", "1");
+  }
 
   try {
-    // Call global real-time Counter API to increment & fetch real visit count
-    const res = await fetch("https://api.counterapi.dev/v1/rage_sensi_ff_live145/visits/up");
+    const res = await fetch(endpoint);
     if (res.ok) {
       const data = await res.json();
       if (data && typeof data.count === "number") {
-        totalVisits = BASE_OFFSET + data.count;
+        const totalVisits = BASE_OFFSET + data.count;
+        if (elements.statTotalVisits) {
+          elements.statTotalVisits.innerText = totalVisits.toLocaleString();
+        }
       }
-    } else {
-      throw new Error("API status non-200");
     }
   } catch (err) {
-    // Fallback: local session tracking if API is offline
-    let storedVisits = parseInt(localStorage.getItem("rage_total_visits_145") || "145", 10);
-    if (!sessionStorage.getItem("rage_session_counted_145")) {
-      storedVisits += 1;
-      localStorage.setItem("rage_total_visits_145", storedVisits.toString());
-      sessionStorage.setItem("rage_session_counted_145", "true");
-    }
-    totalVisits = storedVisits;
-  }
-
-  if (elements.statTotalVisits) {
-    elements.statTotalVisits.innerText = totalVisits.toLocaleString();
+    console.warn("Real-time visitor count update failed:", err);
   }
 }
 
