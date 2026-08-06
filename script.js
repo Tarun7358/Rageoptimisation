@@ -1000,12 +1000,12 @@ function showToast(message) {
    Real-Time Global Visitor Analytics Counter
    -------------------------------------------------------------------------- */
 async function initVisitorCounter() {
-  const BASE_OFFSET = 148920; // Verified enterprise baseline visits count
+  const BASE_OFFSET = 145; // Real-time baseline count starting from 145
   let totalVisits = BASE_OFFSET;
 
   try {
     // Call global real-time Counter API to increment & fetch real visit count
-    const res = await fetch("https://api.counterapi.dev/v1/rage_sensi_ff_global/visits/up");
+    const res = await fetch("https://api.counterapi.dev/v1/rage_sensi_ff_live145/visits/up");
     if (res.ok) {
       const data = await res.json();
       if (data && typeof data.count === "number") {
@@ -1016,11 +1016,11 @@ async function initVisitorCounter() {
     }
   } catch (err) {
     // Fallback: local session tracking if API is offline
-    let storedVisits = parseInt(localStorage.getItem("rage_total_visits") || "148920", 10);
-    if (!sessionStorage.getItem("rage_session_counted")) {
-      storedVisits += Math.floor(Math.random() * 3) + 1;
-      localStorage.setItem("rage_total_visits", storedVisits.toString());
-      sessionStorage.setItem("rage_session_counted", "true");
+    let storedVisits = parseInt(localStorage.getItem("rage_total_visits_145") || "145", 10);
+    if (!sessionStorage.getItem("rage_session_counted_145")) {
+      storedVisits += 1;
+      localStorage.setItem("rage_total_visits_145", storedVisits.toString());
+      sessionStorage.setItem("rage_session_counted_145", "true");
     }
     totalVisits = storedVisits;
   }
