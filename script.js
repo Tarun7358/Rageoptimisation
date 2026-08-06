@@ -270,8 +270,11 @@ const CONFIG = {
       mouseY: "2.85",
       mouseX: "1.45",
       dpi: "1000 DPI",
+      pointerSpeed: "6/11 (6th Notch)",
+      pointerPrecision: "OFF (Disabled)",
       proTips: [
         "In-game sensitivity is set to 0 to eliminate emulator pixel acceleration & drag glitch.",
+        "Set Windows Pointer Speed to 6/11 (6th Notch) with 'Enhance Pointer Precision' OFF.",
         "Higher Y-Sensitivity (2.85) helps compensate for 45-60 FPS emulator lag.",
         "Set BlueStacks 5 resolution to 1280x720 (Low DPI)."
       ]
@@ -290,8 +293,11 @@ const CONFIG = {
       mouseY: "2.45",
       mouseX: "1.25",
       dpi: "800 DPI",
+      pointerSpeed: "6/11 (6th Notch)",
+      pointerPrecision: "OFF (Disabled)",
       proTips: [
         "In-game sensitivity is set to 0 to eliminate emulator pixel acceleration & drag glitch.",
+        "Set Windows Pointer Speed to 6/11 (6th Notch) with 'Enhance Pointer Precision' OFF.",
         "Balanced Y-Sensitivity (2.45) offers crisp drag headshots at 90 FPS.",
         "Use BlueStacks 5 Pie 64-bit instance with 4 Cores + 4GB RAM allocated."
       ]
@@ -309,8 +315,11 @@ const CONFIG = {
       mouseY: "2.10",
       mouseX: "1.10",
       dpi: "800 / 1200 DPI",
+      pointerSpeed: "6/11 (6th Notch)",
+      pointerPrecision: "OFF (Disabled)",
       proTips: [
         "In-game sensitivity is set to 0 to eliminate emulator pixel acceleration & drag glitch.",
+        "Set Windows Pointer Speed to 6/11 (6th Notch) with 'Enhance Pointer Precision' OFF.",
         "Ultra-smooth 120-240 FPS allows low Y-sens (2.10) for pixel-perfect headshots.",
         "Use 1000Hz Mouse Polling Rate for zero mouse latency."
       ]
@@ -792,7 +801,9 @@ function renderUnlockScreen() {
       { label: "AWM Scope", val: `${sensiData.awm}` },
       { label: "Mouse Y-Sens (Drag)", val: `${sensiData.mouseY}`, highlight: "red" },
       { label: "Mouse X-Sens (Look)", val: `${sensiData.mouseX}` },
-      { label: "Mouse Hardware DPI", val: `${sensiData.dpi}`, highlight: "yellow" }
+      { label: "Mouse Hardware DPI", val: `${sensiData.dpi}`, highlight: "yellow" },
+      { label: "Windows Pointer Speed", val: `${sensiData.pointerSpeed}`, highlight: "yellow" },
+      { label: "Pointer Acceleration", val: `${sensiData.pointerPrecision}`, highlight: "red" }
     ];
 
     items.forEach((item) => {
@@ -847,7 +858,7 @@ function copySettingsToClipboard() {
   } else {
     const sensi = CONFIG.SENSITIVITY_PC[state.selectedPcTier];
     textToCopy += `Platform: PC / Emulator (${sensi.name})\n`;
-    textToCopy += `General: ${sensi.general}\nRed Dot: ${sensi.redDot}\n2X Scope: ${sensi.scope2x}\n4X Scope: ${sensi.scope4x}\nAWM: ${sensi.awm}\nMouse Y-Sens: ${sensi.mouseY}\nMouse X-Sens: ${sensi.mouseX}\nDPI: ${sensi.dpi}\n`;
+    textToCopy += `General: ${sensi.general}\nRed Dot: ${sensi.redDot}\n2X Scope: ${sensi.scope2x}\n4X Scope: ${sensi.scope4x}\nAWM: ${sensi.awm}\nMouse Y-Sens: ${sensi.mouseY}\nMouse X-Sens: ${sensi.mouseX}\nDPI: ${sensi.dpi}\nWindows Pointer Speed: ${sensi.pointerSpeed}\nPointer Acceleration: ${sensi.pointerPrecision}\n`;
   }
 
   textToCopy += `\nUnlocked via Rage Optimisation`;
