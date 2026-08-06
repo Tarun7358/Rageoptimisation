@@ -566,7 +566,7 @@ function renderSpecTierScreen(platform) {
 
     brandContainer.appendChild(brandPillsGrid);
 
-    // 2. Models Selection Box for Active Brand with Live Search Filter
+    // 2. Models Selection Box for Active Brand with Pure Dropdown Picker (No Typing Needed)
     const activeBrand = CONFIG.MOBILE_BRANDS.find((b) => b.id === state.selectedMobileBrand) || CONFIG.MOBILE_BRANDS[0];
     
     const modelCard = document.createElement("div");
@@ -575,15 +575,14 @@ function renderSpecTierScreen(platform) {
       <div class="model-card-header">
         <i class="${activeBrand.icon}"></i> <strong>${activeBrand.name} Models (${activeBrand.models.length}+ Devices)</strong>
       </div>
-      <div class="search-model-wrapper">
-        <input type="text" id="search-model-input" placeholder="🔍 Search any iPhone or Android model (e.g. Poco X3, S24 Ultra, iPhone 15...)" />
+      <div class="model-dropdown-wrapper">
+        <label for="model-select-dropdown" class="model-select-label">
+          <i class="fa-solid fa-list-check"></i> Choose Phone Model from Dropdown:
+        </label>
+        <select id="model-select-dropdown" class="model-select-dropdown"></select>
       </div>
-      <p class="model-card-sub">Tap your exact phone model below:</p>
+      <p class="model-card-sub" style="margin-top: 0.5rem;">Or tap your model directly from list below:</p>
       <div class="model-pills-grid" id="model-pills-grid"></div>
-      <div class="custom-model-wrapper">
-        <label for="custom-model-input">Selected Model / Type Custom:</label>
-        <input type="text" id="custom-model-input" placeholder="e.g. Poco X3 Pro, Galaxy A52..." value="${state.selectedMobileModel}" />
-      </div>
       <button class="cta-button-primary" id="btn-confirm-mobile-device" style="margin-top: 1rem; width: 100%;">
         Get Best ${activeBrand.name} Sensitivity <i class="fa-solid fa-arrow-right"></i>
       </button>
@@ -592,46 +591,41 @@ function renderSpecTierScreen(platform) {
     brandContainer.appendChild(modelCard);
     elements.specGrid.appendChild(brandContainer);
 
-    // Populate model pills with search filter logic
+    // Populate model dropdown options and model pills
+    const modelSelectDropdown = document.getElementById("model-select-dropdown");
     const modelPillsGrid = document.getElementById("model-pills-grid");
-    const searchInput = document.getElementById("search-model-input");
-    const customInput = document.getElementById("custom-model-input");
 
-    function populateModelPills(filterQuery = "") {
+    function populateModelOptions() {
+      if (!modelSelectDropdown || !modelPillsGrid) return;
+
+      modelSelectDropdown.innerHTML = "";
       modelPillsGrid.innerHTML = "";
-      const query = filterQuery.toLowerCase().trim();
 
-      let targetModels = activeBrand.models;
+      // Ensure active selected model is valid for current brand
+      if (!activeBrand.models.includes(state.selectedMobileModel)) {
+        state.selectedMobileModel = activeBrand.models[0];
+      }
 
-      // If user typed search query, search across ALL brands' models if needed!
-      if (query.length > 0) {
-        let matched = activeBrand.models.filter((m) => m.toLowerCase().includes(query));
-        if (matched.length === 0) {
-          // Fallback to searching all brands
-          CONFIG.MOBILE_BRANDS.forEach(b => {
-            b.models.forEach(m => {
-              if (m.toLowerCase().includes(query) && !matched.includes(m)) {
-                matched.push(m);
-              }
-            });
-          });
+      // Populate Dropdown Options
+      activeBrand.models.forEach((m) => {
+        const option = document.createElement("option");
+        option.value = m;
+        option.innerText = m;
+        if (m === state.selectedMobileModel) {
+          option.selected = true;
         }
-        targetModels = matched;
-      }
+        modelSelectDropdown.appendChild(option);
+      });
 
-      if (targetModels.length === 0) {
-        modelPillsGrid.innerHTML = `<div class="no-model-found">No exact match found. Type custom name in box below!</div>`;
-        return;
-      }
-
-      targetModels.forEach((m) => {
+      // Populate Clickable Model Pills
+      activeBrand.models.forEach((m) => {
         const isSelected = m === state.selectedMobileModel;
         const pill = document.createElement("div");
         pill.className = `model-pill ${isSelected ? "selected" : ""}`;
         pill.innerText = m;
         pill.addEventListener("click", () => {
           state.selectedMobileModel = m;
-          if (customInput) customInput.value = m;
+          modelSelectDropdown.value = m;
           document.querySelectorAll(".model-pill").forEach(p => p.classList.remove("selected"));
           pill.classList.add("selected");
         });
@@ -639,21 +633,20 @@ function renderSpecTierScreen(platform) {
       });
     }
 
-    populateModelPills();
+    populateModelOptions();
 
-    // Live search input listener
-    if (searchInput) {
-      searchInput.addEventListener("input", (e) => {
-        populateModelPills(e.target.value);
-      });
-    }
-
-    // Custom model input handler
-    if (customInput) {
-      customInput.addEventListener("input", (e) => {
-        if (e.target.value.trim()) {
-          state.selectedMobileModel = e.target.value.trim();
-        }
+    // Dropdown change listener
+    if (modelSelectDropdown) {
+      modelSelectDropdown.addEventListener("change", (e) => {
+        state.selectedMobileModel = e.target.value;
+        // Sync pill highlights
+        document.querySelectorAll(".model-pill").forEach(p => {
+          if (p.innerText === e.target.value) {
+            p.classList.add("selected");
+          } else {
+            p.classList.remove("selected");
+          }
+        });
       });
     }
 
