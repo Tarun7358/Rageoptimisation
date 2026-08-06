@@ -173,10 +173,10 @@ const CONFIG = {
     },
     {
       id: "oppo",
-      name: "OPPO (F31 5G, Reno, Find, F & A Series)",
+      name: "OPPO (F33 5G, F31 5G, Reno, Find, F & A Series)",
       icon: "fa-solid fa-mobile-screen",
       models: [
-        "OPPO F31 5G", "OPPO F27 Pro+ 5G", "OPPO F27 5G", "OPPO Reno 12 Pro 5G", "OPPO Reno 12 5G", "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
+        "OPPO F33 5G", "OPPO F33 Pro 5G", "OPPO F31 5G", "OPPO F27 Pro+ 5G", "OPPO F27 5G", "OPPO Reno 12 Pro 5G", "OPPO Reno 12 5G", "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
         "OPPO Reno 8 Pro 5G", "OPPO Reno 8 5G", "OPPO Reno 7 Pro 5G", "OPPO Reno 6 Pro 5G",
         "OPPO F25 Pro 5G", "OPPO F23 5G", "OPPO F21s Pro 5G", "OPPO F21 Pro 5G", "OPPO F19 Pro+ 5G",
         "OPPO A80 5G", "OPPO A79 5G", "OPPO A59 5G", "OPPO A78 5G", "OPPO A58 5G", "OPPO A38", "OPPO A18", "OPPO A17"
@@ -1166,7 +1166,7 @@ function getModelSensitivity(brandId, modelName, fallbackSensi) {
   hash = Math.abs(hash);
 
   const isUltraPro = /Pro Max|Ultra|GT 5|GT 6|ROG|16 Pro|15 Pro|14 Pro|S24|S23|Fold|RedMagic|Z10 Pro|T4 Pro|Agni 3|Pura 70|Edge 50 Ultra|Pixel 9 Pro/i.test(modelName);
-  const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V40|V30|V29|T4|T3|F31|F27|F25|Z10|Z9|Agni|Edge|Blaze|Razr|Magic/i.test(modelName);
+  const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V40|V30|V29|T4|T3|F33|F31|F27|F25|Z10|Z9|Agni|Edge|Blaze|Razr|Magic/i.test(modelName);
   const isBudget = /A03|A04|A13|A14|C65|C55|13C|Hot|Smart|Spark|Pop|Y16|Y21|Play|Yuva|Blaze 2|E13|Lite/i.test(modelName);
 
   let baseGeneral, baseRedDot, baseScope2x, baseScope4x, baseAwm, baseFreeLook, baseFireButton, baseDpi;

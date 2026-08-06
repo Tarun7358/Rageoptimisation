@@ -1292,13 +1292,13 @@ p, span, div {
   transform: translateY(-2px);
 }
 
-/* Reg Download Bonus Card */
+/* Reg Download Bonus Card (PC Only) */
 .reg-download-card {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  gap: 0.65rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.65rem;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(18, 18, 28, 0.95));
   border: 1px solid rgba(16, 185, 129, 0.35);
   border-radius: var(--radius-lg);
@@ -1309,86 +1309,86 @@ p, span, div {
 }
 
 .reg-card-header {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0.5rem !important;
-  flex-wrap: wrap !important;
-  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .reg-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.35rem !important;
-  padding: 0.25rem 0.65rem !important;
-  border-radius: var(--radius-full) !important;
-  background: rgba(16, 185, 129, 0.2) !important;
-  color: #10b981 !important;
-  border: 1px solid #10b981 !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  white-space: nowrap !important;
-  flex-shrink: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid #10b981;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .reg-badge-yellow {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.35rem !important;
-  padding: 0.25rem 0.65rem !important;
-  border-radius: var(--radius-full) !important;
-  background: rgba(255, 204, 0, 0.15) !important;
-  color: var(--accent-yellow) !important;
-  border: 1px solid var(--accent-yellow) !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  white-space: nowrap !important;
-  flex-shrink: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 204, 0, 0.15);
+  color: var(--accent-yellow);
+  border: 1px solid var(--accent-yellow);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .reg-card-title {
-  font-size: 1.1rem !important;
-  color: var(--text-main) !important;
-  line-height: 1.35 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  word-break: normal !important;
-  overflow-wrap: break-word !important;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin: 0;
+  width: 100%;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .reg-card-desc {
-  font-size: 0.78rem !important;
-  color: var(--text-muted) !important;
-  line-height: 1.45 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  word-break: normal !important;
-  overflow-wrap: break-word !important;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+  width: 100%;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .reg-download-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0.45rem !important;
-  padding: 0.8rem 1.25rem !important;
-  background: linear-gradient(135deg, #10b981, #059669) !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  border-radius: var(--radius-md) !important;
-  font-family: var(--font-heading) !important;
-  font-weight: 800 !important;
-  font-size: 0.92rem !important;
-  text-transform: uppercase !important;
-  box-shadow: 0 4px 15px var(--success-glow) !important;
-  transition: transform var(--transition-fast) !important;
-  width: 100% !important;
-  white-space: nowrap !important;
-  flex-shrink: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.8rem 1.25rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px var(--success-glow);
+  transition: transform var(--transition-fast);
+  width: 100%;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .reg-download-btn:hover {
