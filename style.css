@@ -579,7 +579,7 @@ p, span, div {
   text-transform: uppercase;
 }
 
-/* Mobile Brand Selection Component */
+/* Mobile Brand Selection Component - Smooth Scroll View */
 .mobile-brand-wrapper {
   display: flex;
   flex-direction: column;
@@ -587,18 +587,40 @@ p, span, div {
 }
 
 .brand-pills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* Custom Scrollbar for Brand Horizontal Scroll View */
+.brand-pills-grid::-webkit-scrollbar {
+  height: 4px;
+}
+
+.brand-pills-grid::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-full);
+}
+
+.brand-pills-grid::-webkit-scrollbar-thumb {
+  background: var(--accent-fire);
+  border-radius: var(--radius-full);
 }
 
 .brand-pill-btn {
-  background: rgba(18, 18, 28, 0.8);
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: rgba(18, 18, 28, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-muted);
-  padding: 0.65rem 0.5rem;
+  padding: 0.65rem 0.85rem;
   border-radius: var(--radius-md);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -606,16 +628,17 @@ p, span, div {
   justify-content: center;
   gap: 0.4rem;
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .brand-pill-btn:hover {
-  background: rgba(255, 77, 46, 0.1);
-  border-color: rgba(255, 77, 46, 0.3);
+  background: rgba(255, 77, 46, 0.15);
+  border-color: rgba(255, 77, 46, 0.35);
   color: var(--text-main);
 }
 
 .brand-pill-btn.selected {
-  background: rgba(255, 77, 46, 0.18);
+  background: rgba(255, 77, 46, 0.2);
   border-color: var(--accent-fire);
   color: var(--accent-fire);
   box-shadow: 0 0 12px var(--accent-fire-glow);
@@ -669,22 +692,25 @@ p, span, div {
   color: var(--text-muted);
 }
 
+/* Model Pills Vertical Scroll View */
 .model-pills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  max-height: 240px;
+  gap: 0.45rem;
+  max-height: 220px;
   overflow-y: auto;
-  padding-right: 0.25rem;
+  padding-right: 0.35rem;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
 }
 
-/* Custom Scrollbar for Model Grid */
+/* Custom Scrollbar for Model Grid Scroll View */
 .model-pills-grid::-webkit-scrollbar {
   width: 5px;
 }
 
 .model-pills-grid::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: var(--radius-full);
 }
 
