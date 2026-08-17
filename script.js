@@ -15,8 +15,9 @@ const CONFIG = {
       name: "Apple (iPhone / iPad)",
       icon: "fa-brands fa-apple",
       models: [
-        "iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16",
-        "iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15",
+        "iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone 17 Plus", "iPhone 17",
+        "iPhone 16e", "iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 Plus", "iPhone 16",
+        "iPhone SE (2025)", "iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15",
         "iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 Plus", "iPhone 14",
         "iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 Mini",
         "iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 Mini",
@@ -24,7 +25,7 @@ const CONFIG = {
         "iPhone XS Max", "iPhone XS", "iPhone XR", "iPhone X",
         "iPhone 8 Plus", "iPhone 8", "iPhone 7 Plus", "iPhone 7",
         "iPhone SE (2022)", "iPhone SE (2020)",
-        "iPad Pro 12.9 (M1/M2/M4)", "iPad Pro 11 (M1/M2/M4)", "iPad Air (M1/M2)", "iPad Mini 6", "iPad 10th Gen", "iPad 9th Gen"
+        "iPad Pro 13 (M4)", "iPad Pro 12.9 (M1/M2)", "iPad Pro 11 (M1/M2/M4)", "iPad Air 6 (M2)", "iPad Air (M1)", "iPad Mini 7", "iPad Mini 6", "iPad 10th Gen", "iPad 9th Gen"
       ],
       sensi: {
         general: "172",
@@ -44,14 +45,12 @@ const CONFIG = {
     },
     {
       id: "iqoo",
-      name: "iQOO (Z10 5G, Neo & Monster Gaming Series)",
+      name: "iQOO (Z10 5G, Neo 10, iQOO 13 & Monster Gaming Series)",
       icon: "fa-solid fa-bolt-lightning",
       models: [
-        "iQOO Z10 5G", "iQOO Z10 Pro 5G", "iQOO Z10x 5G",
-        "iQOO Z9s Pro 5G", "iQOO Z9s 5G", "iQOO Z9 5G", "iQOO Z9x 5G", "iQOO Z9 Turbo",
-        "iQOO 13 5G", "iQOO 12 Pro", "iQOO 12 5G", "iQOO 11 5G", "iQOO 9 Pro", "iQOO 9T", "iQOO 9 5G", "iQOO 9 SE", "iQOO 7 Legend", "iQOO 7",
-        "iQOO Neo 9 Pro", "iQOO Neo 9", "iQOO Neo 7 Pro", "iQOO Neo 7", "iQOO Neo 6",
-        "iQOO Z8", "iQOO Z7 Pro 5G", "iQOO Z7 5G", "iQOO Z7s 5G", "iQOO Z6 Pro 5G", "iQOO Z6 5G", "iQOO Z6 Lite 5G"
+        "iQOO 14 Pro", "iQOO 14 5G", "iQOO 13 5G", "iQOO 12 Pro", "iQOO 12 5G", "iQOO 11 5G", "iQOO 9 Pro", "iQOO 9T", "iQOO 9 5G", "iQOO 9 SE", "iQOO 7 Legend", "iQOO 7",
+        "iQOO Neo 10 Pro", "iQOO Neo 10", "iQOO Neo 9 Pro", "iQOO Neo 9", "iQOO Neo 7 Pro", "iQOO Neo 7", "iQOO Neo 6",
+        "iQOO Z10 5G", "iQOO Z10 Pro 5G", "iQOO Z10x 5G", "iQOO Z9s Pro 5G", "iQOO Z9s 5G", "iQOO Z9 5G", "iQOO Z9x 5G", "iQOO Z9 Turbo+", "iQOO Z9 Turbo", "iQOO Z8", "iQOO Z7 Pro 5G", "iQOO Z7 5G", "iQOO Z7s 5G", "iQOO Z6 Pro 5G", "iQOO Z6 5G", "iQOO Z6 Lite 5G"
       ],
       sensi: {
         general: "178",
@@ -71,15 +70,17 @@ const CONFIG = {
     },
     {
       id: "vivo",
-      name: "Vivo (T4 5G, V40, V30, T3, X Series)",
+      name: "Vivo (V70 FE, V70/V60/V50, T5/T4 5G, X Series)",
       icon: "fa-solid fa-mobile-screen-button",
       models: [
-        "Vivo T4 5G", "Vivo T4 Pro 5G", "Vivo T4x 5G",
-        "Vivo V40 Pro 5G", "Vivo V40 5G", "Vivo V40 SE 5G", "Vivo V30 Pro", "Vivo V30", "Vivo V30e",
-        "Vivo T3 Ultra", "Vivo T3 Pro 5G", "Vivo T3 5G", "Vivo T3x 5G", "Vivo T2 Pro 5G", "Vivo T2 5G", "Vivo T2x 5G", "Vivo T1 Pro 5G", "Vivo T1 5G",
-        "Vivo X100 Pro", "Vivo X100", "Vivo X90 Pro", "Vivo X90", "Vivo X80 Pro",
-        "Vivo V29 Pro", "Vivo V29", "Vivo V29e", "Vivo V27 Pro", "Vivo V27", "Vivo V25 Pro", "Vivo V23 Pro",
-        "Vivo Y300 5G", "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y16", "Vivo Y21"
+        "Vivo V70 FE", "Vivo V70 Pro 5G", "Vivo V70 5G",
+        "Vivo V60 Pro 5G", "Vivo V60 5G",
+        "Vivo V50 Pro 5G", "Vivo V50 5G", "Vivo V50e",
+        "Vivo V40 Pro 5G", "Vivo V40 5G", "Vivo V40 SE 5G", "Vivo V40 Lite", "Vivo V30 Pro", "Vivo V30", "Vivo V30e",
+        "Vivo V29 Pro", "Vivo V29", "Vivo V29e", "Vivo V27 Pro", "Vivo V27", "Vivo V25 Pro", "Vivo V23 Pro", "Vivo V21 5G", "Vivo V20", "Vivo V19", "Vivo V17 Pro", "Vivo V15 Pro",
+        "Vivo X200 Pro Ultra", "Vivo X200 Pro", "Vivo X200", "Vivo X100 Ultra", "Vivo X100 Pro", "Vivo X100", "Vivo X90 Pro", "Vivo X90", "Vivo X80 Pro", "Vivo X70 Pro+",
+        "Vivo T5 5G", "Vivo T4 Pro 5G", "Vivo T4 5G", "Vivo T4x 5G", "Vivo T3 Ultra", "Vivo T3 Pro 5G", "Vivo T3 5G", "Vivo T3x 5G", "Vivo T2 Pro 5G", "Vivo T2 5G", "Vivo T2x 5G", "Vivo T1 Pro 5G", "Vivo T1 5G",
+        "Vivo Y400 5G", "Vivo Y300 Pro", "Vivo Y300 5G", "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y22", "Vivo Y21", "Vivo Y20", "Vivo Y19", "Vivo Y16", "Vivo Y15"
       ],
       sensi: {
         general: "190",
@@ -103,18 +104,19 @@ const CONFIG = {
       icon: "fa-solid fa-mobile-screen-button",
       models: [
         // POCO Series
-        "POCO X6 Pro 5G", "POCO X6 5G", "POCO X5 Pro 5G", "POCO X5 5G", "POCO X4 Pro 5G", "POCO X3 Pro", "POCO X3 NFC", "POCO X3",
-        "POCO F6 Pro", "POCO F6", "POCO F5 Pro", "POCO F5", "POCO F4 5G", "POCO F3 GT", "POCO F3",
-        "POCO M6 Pro 5G", "POCO M6 5G", "POCO M5", "POCO M4 Pro 5G", "POCO M3 Pro 5G", "POCO C65", "POCO C55", "POCO C51",
+        "POCO F7 Pro", "POCO F7", "POCO F6 Pro", "POCO F6", "POCO F5 Pro", "POCO F5", "POCO F4 5G", "POCO F3 GT", "POCO F3",
+        "POCO X7 Pro 5G", "POCO X7 5G", "POCO X6 Pro 5G", "POCO X6 5G", "POCO X5 Pro 5G", "POCO X5 5G", "POCO X4 Pro 5G", "POCO X3 Pro", "POCO X3 NFC", "POCO X3",
+        "POCO M7 Pro 5G", "POCO M6 Pro 5G", "POCO M6 5G", "POCO M5", "POCO M4 Pro 5G", "POCO M3 Pro 5G", "POCO C65", "POCO C55", "POCO C51",
         // Redmi Note Series
+        "Redmi Note 14 Pro+ 5G", "Redmi Note 14 Pro 5G", "Redmi Note 14 5G",
         "Redmi Note 13 Pro+ 5G", "Redmi Note 13 Pro 5G", "Redmi Note 13 5G", "Redmi Note 13 4G",
         "Redmi Note 12 Pro+ 5G", "Redmi Note 12 Pro 5G", "Redmi Note 12 5G", "Redmi Note 12 4G", "Redmi Note 12 Turbo",
         "Redmi Note 11 Pro+ 5G", "Redmi Note 11 Pro 5G", "Redmi Note 11S", "Redmi Note 11",
         "Redmi Note 10 Pro Max", "Redmi Note 10 Pro", "Redmi Note 10S", "Redmi Note 10", "Redmi Note 10T 5G",
         "Redmi Note 9 Pro Max", "Redmi Note 9 Pro", "Redmi Note 9S", "Redmi Note 9", "Redmi Note 8 Pro", "Redmi Note 8",
         // Redmi Budget & Xiaomi Flagships
-        "Redmi 13C 5G", "Redmi 13C", "Redmi 12 5G", "Redmi 12", "Redmi 11 Prime 5G", "Redmi 10C", "Redmi 10", "Redmi 9A", "Redmi 9C", "Redmi A3", "Redmi A2+",
-        "Xiaomi 14 Ultra", "Xiaomi 14 Pro", "Xiaomi 14", "Xiaomi 14T Pro", "Xiaomi 14T", "Xiaomi 13T Pro", "Xiaomi 13T", "Xiaomi 13 Pro", "Xiaomi 13 Ultra",
+        "Redmi 14C 5G", "Redmi 13C 5G", "Redmi 13C", "Redmi 12 5G", "Redmi 12", "Redmi 11 Prime 5G", "Redmi 10C", "Redmi 10", "Redmi 9A", "Redmi 9C", "Redmi A3", "Redmi A2+",
+        "Xiaomi 15 Ultra", "Xiaomi 15 Pro", "Xiaomi 15", "Xiaomi 14 Ultra", "Xiaomi 14 Pro", "Xiaomi 14", "Xiaomi 14T Pro", "Xiaomi 14T", "Xiaomi 13T Pro", "Xiaomi 13T", "Xiaomi 13 Pro", "Xiaomi 13 Ultra",
         "Xiaomi 12T Pro", "Xiaomi 12 Pro", "Xiaomi 12X", "Xiaomi 11T Pro", "Xiaomi Mi 11X Pro", "Xiaomi Mi 11X", "Xiaomi Mi 10i"
       ],
       sensi: {
@@ -139,21 +141,22 @@ const CONFIG = {
       icon: "fa-solid fa-mobile-retro",
       models: [
         // S-Series Flagships
+        "Galaxy S25 Ultra", "Galaxy S25+", "Galaxy S25", "Galaxy S25 FE",
         "Galaxy S24 Ultra", "Galaxy S24+", "Galaxy S24", "Galaxy S24 FE",
         "Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy S23 FE",
         "Galaxy S22 Ultra", "Galaxy S22+", "Galaxy S22",
         "Galaxy S21 Ultra", "Galaxy S21+", "Galaxy S21", "Galaxy S21 FE 5G",
         "Galaxy S20 Ultra", "Galaxy S20+", "Galaxy S20", "Galaxy S20 FE 5G", "Galaxy S10+", "Galaxy S10", "Galaxy S9+",
         // A-Series
-        "Galaxy A55 5G", "Galaxy A54 5G", "Galaxy A53 5G", "Galaxy A52s 5G", "Galaxy A52 5G", "Galaxy A52", "Galaxy A51",
+        "Galaxy A56 5G", "Galaxy A36 5G", "Galaxy A55 5G", "Galaxy A54 5G", "Galaxy A53 5G", "Galaxy A52s 5G", "Galaxy A52 5G", "Galaxy A52", "Galaxy A51",
         "Galaxy A35 5G", "Galaxy A34 5G", "Galaxy A33 5G", "Galaxy A32 5G", "Galaxy A32",
         "Galaxy A25 5G", "Galaxy A24", "Galaxy A23 5G", "Galaxy A23", "Galaxy A22 5G",
         "Galaxy A16 5G", "Galaxy A15 5G", "Galaxy A14 5G", "Galaxy A14", "Galaxy A13", "Galaxy A12", "Galaxy A05s", "Galaxy A04s", "Galaxy A03s",
         // M & F Series
-        "Galaxy M55 5G", "Galaxy M54 5G", "Galaxy M53 5G", "Galaxy M52 5G", "Galaxy M34 5G", "Galaxy M33 5G", "Galaxy M32 5G",
-        "Galaxy M14 5G", "Galaxy M13 5G", "Galaxy M12", "Galaxy F55 5G", "Galaxy F54 5G", "Galaxy F34 5G", "Galaxy F14 5G", "Galaxy F23 5G",
+        "Galaxy M56 5G", "Galaxy M55 5G", "Galaxy M54 5G", "Galaxy M53 5G", "Galaxy M52 5G", "Galaxy M35 5G", "Galaxy M34 5G", "Galaxy M33 5G", "Galaxy M32 5G",
+        "Galaxy M15 5G", "Galaxy M14 5G", "Galaxy M13 5G", "Galaxy M12", "Galaxy F56 5G", "Galaxy F55 5G", "Galaxy F54 5G", "Galaxy F34 5G", "Galaxy F15 5G", "Galaxy F14 5G", "Galaxy F23 5G",
         // Z-Series Foldables
-        "Galaxy Z Fold 6", "Galaxy Z Fold 5", "Galaxy Z Fold 4", "Galaxy Z Fold 3", "Galaxy Z Flip 6", "Galaxy Z Flip 5", "Galaxy Z Flip 4"
+        "Galaxy Z Fold 7", "Galaxy Z Flip 7", "Galaxy Z Fold 6", "Galaxy Z Fold 5", "Galaxy Z Fold 4", "Galaxy Z Fold 3", "Galaxy Z Flip 6", "Galaxy Z Flip 5", "Galaxy Z Flip 4"
       ],
       sensi: {
         general: "188",
@@ -173,11 +176,12 @@ const CONFIG = {
     },
     {
       id: "oppo",
-      name: "OPPO (F33 5G, F31 5G, Reno, Find, F & A Series)",
+      name: "OPPO (F35 5G, F33, Reno, Find, F & A Series)",
       icon: "fa-solid fa-mobile-screen",
       models: [
-        "OPPO F33 5G", "OPPO F33 Pro 5G", "OPPO F31 5G", "OPPO F27 Pro+ 5G", "OPPO F27 5G", "OPPO Reno 12 Pro 5G", "OPPO Reno 12 5G", "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
-        "OPPO Reno 8 Pro 5G", "OPPO Reno 8 5G", "OPPO Reno 7 Pro 5G", "OPPO Reno 6 Pro 5G",
+        "OPPO F35 5G", "OPPO F33 5G", "OPPO F33 Pro 5G", "OPPO F31 5G", "OPPO F27 Pro+ 5G", "OPPO F27 5G",
+        "OPPO Reno 13 Pro 5G", "OPPO Reno 13 5G", "OPPO Reno 12 Pro 5G", "OPPO Reno 12 5G", "OPPO Reno 11 Pro 5G", "OPPO Reno 11 5G", "OPPO Reno 10 Pro+ 5G", "OPPO Reno 10 Pro 5G", "OPPO Reno 10 5G",
+        "OPPO Reno 8 Pro 5G", "OPPO Reno 8 5G", "OPPO Reno 7 Pro 5G", "OPPO Reno 6 Pro 5G", "OPPO Find X8 Pro", "OPPO Find X8", "OPPO Find N3 Flip",
         "OPPO F25 Pro 5G", "OPPO F23 5G", "OPPO F21s Pro 5G", "OPPO F21 Pro 5G", "OPPO F19 Pro+ 5G",
         "OPPO A80 5G", "OPPO A79 5G", "OPPO A59 5G", "OPPO A78 5G", "OPPO A58 5G", "OPPO A38", "OPPO A18", "OPPO A17"
       ],
@@ -199,15 +203,16 @@ const CONFIG = {
     },
     {
       id: "realme",
-      name: "Realme",
+      name: "Realme (Realme 14, 13, GT 7 Pro & Narzo Series)",
       icon: "fa-solid fa-mobile",
       models: [
+        "Realme 14 Pro+ 5G", "Realme 14 Pro 5G", "Realme 14 5G",
         "Realme 13 Pro+ 5G", "Realme 13 Pro 5G", "Realme 13+ 5G", "Realme 12 Pro+ 5G", "Realme 12 Pro 5G", "Realme 12+ 5G", "Realme 12 5G", "Realme 12x 5G",
         "Realme 11 Pro+ 5G", "Realme 11 Pro 5G", "Realme 11 5G", "Realme 11x 5G",
         "Realme 10 Pro+ 5G", "Realme 10 Pro 5G", "Realme 10 5G", "Realme 10",
         "Realme 9 Pro+ 5G", "Realme 9 Pro 5G", "Realme 9i 5G", "Realme 9 5G", "Realme 8 Pro", "Realme 8 5G", "Realme 8", "Realme 7 Pro",
-        "Realme GT 6", "Realme GT 6T", "Realme GT 5 Pro", "Realme GT 5", "Realme GT 3", "Realme GT 2 Pro", "Realme GT 2", "Realme GT Neo 6 SE", "Realme GT Neo 5", "Realme GT Neo 3T", "Realme GT Neo 3", "Realme GT Neo 2", "Realme GT Master Edition",
-        "Realme Narzo 70 Turbo 5G", "Realme Narzo 70 Pro 5G", "Realme Narzo 70x 5G", "Realme Narzo 60 Pro 5G", "Realme Narzo 60x 5G", "Realme Narzo 50 Pro 5G", "Realme Narzo 50", "Realme Narzo 30 5G",
+        "Realme GT 7 Pro", "Realme GT 6", "Realme GT 6T", "Realme GT 5 Pro", "Realme GT 5", "Realme GT 3", "Realme GT 2 Pro", "Realme GT 2", "Realme GT Neo 6 SE", "Realme GT Neo 5", "Realme GT Neo 3T", "Realme GT Neo 3", "Realme GT Neo 2", "Realme GT Master Edition",
+        "Realme Narzo 80 Pro 5G", "Realme Narzo 70 Turbo 5G", "Realme Narzo 70 Pro 5G", "Realme Narzo 70x 5G", "Realme Narzo 60 Pro 5G", "Realme Narzo 60x 5G", "Realme Narzo 50 Pro 5G", "Realme Narzo 50", "Realme Narzo 30 5G",
         "Realme C67 5G", "Realme C65 5G", "Realme C55", "Realme C53", "Realme C35", "Realme C33", "Realme C31", "Realme C25s"
       ],
       sensi: {
@@ -231,12 +236,12 @@ const CONFIG = {
       name: "OnePlus",
       icon: "fa-solid fa-bolt",
       models: [
-        "OnePlus 13", "OnePlus 12", "OnePlus 12R", "OnePlus 11", "OnePlus 11R",
-        "OnePlus Open", "OnePlus 10 Pro", "OnePlus 10T", "OnePlus 10R",
+        "OnePlus 13", "OnePlus 13R", "OnePlus 12", "OnePlus 12R", "OnePlus 11", "OnePlus 11R",
+        "OnePlus Open 2", "OnePlus Open", "OnePlus 10 Pro", "OnePlus 10T", "OnePlus 10R",
         "OnePlus 9 Pro", "OnePlus 9RT", "OnePlus 9", "OnePlus 9R",
         "OnePlus 8T", "OnePlus 8 Pro", "OnePlus 8", "OnePlus 7T Pro", "OnePlus 7T", "OnePlus 7 Pro",
-        "OnePlus Nord 4", "OnePlus Nord 3 5G", "OnePlus Nord 2T 5G", "OnePlus Nord 2 5G", "OnePlus Nord",
-        "OnePlus Nord CE 4 5G", "OnePlus Nord CE 4 Lite 5G", "OnePlus Nord CE 3 5G", "OnePlus Nord CE 3 Lite 5G", "OnePlus Nord CE 2 5G", "OnePlus Nord CE 2 Lite"
+        "OnePlus Nord 5", "OnePlus Nord 4", "OnePlus Nord 3 5G", "OnePlus Nord 2T 5G", "OnePlus Nord 2 5G", "OnePlus Nord",
+        "OnePlus Nord CE 5 5G", "OnePlus Nord CE 4 5G", "OnePlus Nord CE 4 Lite 5G", "OnePlus Nord CE 3 5G", "OnePlus Nord CE 3 Lite 5G", "OnePlus Nord CE 2 5G", "OnePlus Nord CE 2 Lite"
       ],
       sensi: {
         general: "178",
@@ -259,9 +264,9 @@ const CONFIG = {
       name: "Motorola (Edge, G & Razr Series)",
       icon: "fa-solid fa-m",
       models: [
-        "Moto Edge 50 Ultra", "Moto Edge 50 Pro 5G", "Moto Edge 50 Fusion", "Moto Edge 50 Neo",
+        "Moto Edge 60 Ultra", "Moto Edge 60 Pro", "Moto Edge 50 Ultra", "Moto Edge 50 Pro 5G", "Moto Edge 50 Fusion", "Moto Edge 50 Neo",
         "Moto Edge 40 Neo", "Moto Edge 40 5G", "Moto Edge 30 Ultra", "Moto Edge 30 Fusion", "Moto Edge 30 Pro", "Moto Edge 30",
-        "Moto G85 5G", "Moto G84 5G", "Moto G64 5G", "Moto G54 5G", "Moto G45 5G", "Moto G34 5G", "Moto G24 Power", "Moto G14", "Moto G82 5G", "Moto G73 5G", "Moto G62 5G", "Moto G52", "Moto G32", "Moto E13",
+        "Moto G86 5G", "Moto G85 5G", "Moto G84 5G", "Moto G65 5G", "Moto G64 5G", "Moto G54 5G", "Moto G45 5G", "Moto G34 5G", "Moto G24 Power", "Moto G14", "Moto G82 5G", "Moto G73 5G", "Moto G62 5G", "Moto G52", "Moto G32", "Moto E13",
         "Moto Razr 50 Ultra", "Moto Razr 40 Ultra"
       ],
       sensi: {
@@ -285,9 +290,9 @@ const CONFIG = {
       name: "Lava (Agni, Blaze & Storm Series)",
       icon: "fa-solid fa-fire",
       models: [
-        "Lava Agni 3 5G", "Lava Agni 2 5G",
-        "Lava Blaze 3 5G", "Lava Blaze Curve 5G", "Lava Blaze Pro 5G", "Lava Blaze 2 5G",
-        "Lava Storm 5G", "Lava Yuva 3 Pro", "Lava Yuva 2 Pro", "Lava Yuva 5G"
+        "Lava Agni 4 5G", "Lava Agni 3 5G", "Lava Agni 2 5G",
+        "Lava Blaze 4 5G", "Lava Blaze 3 5G", "Lava Blaze Curve 5G", "Lava Blaze Pro 5G", "Lava Blaze 2 5G",
+        "Lava Storm 2 5G", "Lava Storm 5G", "Lava Yuva 5G", "Lava Yuva 3 Pro", "Lava Yuva 2 Pro"
       ],
       sensi: {
         general: "191",
@@ -310,10 +315,10 @@ const CONFIG = {
       name: "Honor / Huawei",
       icon: "fa-solid fa-shield-halved",
       models: [
-        "Honor 200 Pro 5G", "Honor 200 5G", "Honor 200 Lite",
+        "Honor 300 Pro 5G", "Honor 300 5G", "Honor 200 Pro 5G", "Honor 200 5G", "Honor 200 Lite",
         "Honor 90 5G", "Honor X9b 5G", "Honor X8b", "Honor X7b",
-        "Honor Magic 6 Pro", "Honor Magic V2", "Honor Magic 5 Pro",
-        "Huawei Pura 70 Ultra", "Huawei Pura 70 Pro", "Huawei Mate 60 Pro"
+        "Honor Magic 7 Pro", "Honor Magic 6 Pro", "Honor Magic V3", "Honor Magic V2", "Honor Magic 5 Pro",
+        "Huawei Pura 70 Ultra", "Huawei Pura 70 Pro", "Huawei Mate 70 Pro", "Huawei Mate 60 Pro"
       ],
       sensi: {
         general: "185",
@@ -371,7 +376,7 @@ const CONFIG = {
       name: "Google Pixel",
       icon: "fa-brands fa-google",
       models: [
-        "Google Pixel 9 Pro XL", "Google Pixel 9 Pro", "Google Pixel 9", "Google Pixel 9 Pro Fold",
+        "Google Pixel 9a", "Google Pixel 9 Pro XL", "Google Pixel 9 Pro", "Google Pixel 9", "Google Pixel 9 Pro Fold",
         "Google Pixel 8 Pro", "Google Pixel 8a", "Google Pixel 8",
         "Google Pixel 7a", "Google Pixel 7 Pro", "Google Pixel 7",
         "Google Pixel 6a", "Google Pixel 6 Pro", "Google Pixel 6"
@@ -398,14 +403,14 @@ const CONFIG = {
       icon: "fa-solid fa-microchip",
       models: [
         // Infinix Series
-        "Infinix Zero 40 5G", "Infinix GT 20 Pro", "Infinix GT 10 Pro",
-        "Infinix Note 40 Pro+ 5G", "Infinix Note 40 Pro 5G", "Infinix Note 40 5G", "Infinix Note 30 5G", "Infinix Note 30 VIP", "Infinix Note 12 Pro 5G", "Infinix Note 12 VIP", "Infinix Note 11 Pro", "Infinix Note 10 Pro",
+        "Infinix GT 30 Pro", "Infinix Zero 40 5G", "Infinix GT 20 Pro", "Infinix GT 10 Pro",
+        "Infinix Note 50 Pro+ 5G", "Infinix Note 50 Pro 5G", "Infinix Note 40 Pro+ 5G", "Infinix Note 40 Pro 5G", "Infinix Note 40 5G", "Infinix Note 30 5G", "Infinix Note 30 VIP", "Infinix Note 12 Pro 5G", "Infinix Note 12 VIP", "Infinix Note 11 Pro", "Infinix Note 10 Pro",
         "Infinix Zero 30 5G", "Infinix Zero Ultra", "Infinix Zero 5G 2023", "Infinix Zero 20",
-        "Infinix Hot 50 5G", "Infinix Hot 40 Pro", "Infinix Hot 40i", "Infinix Hot 30 5G", "Infinix Hot 30i", "Infinix Hot 20 5G", "Infinix Hot 20 Play", "Infinix Hot 12 Pro", "Infinix Hot 12 Play", "Infinix Hot 11S", "Infinix Hot 10S",
-        "Infinix Smart 8 HD", "Infinix Smart 8 Pro", "Infinix Smart 7", "Infinix Smart 6",
+        "Infinix Hot 50 Pro+ 5G", "Infinix Hot 50 5G", "Infinix Hot 40 Pro", "Infinix Hot 40i", "Infinix Hot 30 5G", "Infinix Hot 30i", "Infinix Hot 20 5G", "Infinix Hot 20 Play", "Infinix Hot 12 Pro", "Infinix Hot 12 Play", "Infinix Hot 11S", "Infinix Hot 10S",
+        "Infinix Smart 9", "Infinix Smart 8 HD", "Infinix Smart 8 Pro", "Infinix Smart 7", "Infinix Smart 6",
         // Tecno Series
-        "Tecno Camon 30 Premier 5G", "Tecno Camon 30 Pro 5G", "Tecno Camon 30 5G", "Tecno Camon 20 Pro 5G", "Tecno Camon 20 Premier", "Tecno Camon 19 Pro 5G",
-        "Tecno Pova 6 Pro 5G", "Tecno Pova 5 Pro 5G", "Tecno Pova 5", "Tecno Pova 4 Pro", "Tecno Pova 3", "Tecno Pova 2",
+        "Tecno Camon 40 Premier 5G", "Tecno Camon 30 Premier 5G", "Tecno Camon 30 Pro 5G", "Tecno Camon 30 5G", "Tecno Camon 20 Pro 5G", "Tecno Camon 20 Premier", "Tecno Camon 19 Pro 5G",
+        "Tecno Pova 7 Pro 5G", "Tecno Pova 6 Pro 5G", "Tecno Pova 5 Pro 5G", "Tecno Pova 5", "Tecno Pova 4 Pro", "Tecno Pova 3", "Tecno Pova 2",
         "Tecno Spark 30 Pro", "Tecno Spark 20 Pro+", "Tecno Spark 20 Pro", "Tecno Spark 20 5G", "Tecno Spark 10 Pro", "Tecno Spark 9 Pro", "Tecno Spark 8T", "Tecno Pop 8", "Tecno Pop 7 Pro"
       ],
       sensi: {
@@ -430,9 +435,9 @@ const CONFIG = {
       icon: "fa-solid fa-gamepad",
       models: [
         // ASUS ROG Series
-        "ASUS ROG Phone 8 Pro", "ASUS ROG Phone 8", "ASUS ROG Phone 7 Ultimate", "ASUS ROG Phone 7", "ASUS ROG Phone 6D Ultimate", "ASUS ROG Phone 6D", "ASUS ROG Phone 6 Pro", "ASUS ROG Phone 6", "ASUS ROG Phone 5s Pro", "ASUS ROG Phone 5s", "ASUS ROG Phone 5", "ASUS ROG Phone 3",
+        "ASUS ROG Phone 9 Pro", "ASUS ROG Phone 9", "ASUS ROG Phone 8 Pro", "ASUS ROG Phone 8", "ASUS ROG Phone 7 Ultimate", "ASUS ROG Phone 7", "ASUS ROG Phone 6D Ultimate", "ASUS ROG Phone 6D", "ASUS ROG Phone 6 Pro", "ASUS ROG Phone 6", "ASUS ROG Phone 5s Pro", "ASUS ROG Phone 5s", "ASUS ROG Phone 5", "ASUS ROG Phone 3",
         // Nubia RedMagic Series
-        "Nubia RedMagic 9S Pro+", "Nubia RedMagic 9S Pro", "Nubia RedMagic 9 Pro+", "Nubia RedMagic 9 Pro", "Nubia RedMagic 8S Pro+", "Nubia RedMagic 8S Pro", "Nubia RedMagic 8 Pro", "Nubia RedMagic 7S Pro", "Nubia RedMagic 7 Pro", "Nubia RedMagic 7", "Nubia RedMagic 6S Pro", "Nubia RedMagic 6 Pro",
+        "Nubia RedMagic 10 Pro+", "Nubia RedMagic 10 Pro", "Nubia RedMagic 9S Pro+", "Nubia RedMagic 9S Pro", "Nubia RedMagic 9 Pro+", "Nubia RedMagic 9 Pro", "Nubia RedMagic 8S Pro+", "Nubia RedMagic 8S Pro", "Nubia RedMagic 8 Pro", "Nubia RedMagic 7S Pro", "Nubia RedMagic 7 Pro", "Nubia RedMagic 7", "Nubia RedMagic 6S Pro", "Nubia RedMagic 6 Pro",
         // Black Shark Series
         "Black Shark 5 Pro", "Black Shark 5 RS", "Black Shark 5", "Black Shark 4 Pro", "Black Shark 4S Pro", "Black Shark 4", "Black Shark 3 Pro", "Black Shark 3"
       ],
@@ -1173,9 +1178,9 @@ function getModelSensitivity(brandId, modelName, fallbackSensi) {
   }
   hash = Math.abs(hash);
 
-  const isUltraPro = /Pro Max|Ultra|GT 5|GT 6|ROG|16 Pro|15 Pro|14 Pro|S24|S23|Fold|RedMagic|Z10 Pro|T4 Pro|Agni 3|Pura 70|Edge 50 Ultra|Pixel 9 Pro/i.test(modelName);
-  const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V40|V30|V29|T4|T3|F33|F31|F27|F25|Z10|Z9|Agni|Edge|Blaze|Razr|Magic/i.test(modelName);
-  const isBudget = /A03|A04|A13|A14|C65|C55|13C|Hot|Smart|Spark|Pop|Y16|Y21|Play|Yuva|Blaze 2|E13|Lite/i.test(modelName);
+  const isUltraPro = /Pro Max|Ultra|GT 5|GT 6|GT 7|ROG|17 Pro|16 Pro|15 Pro|14 Pro|S25|S24|S23|Fold|RedMagic|Z10 Pro|T5 Pro|T4 Pro|Agni 4|Agni 3|Pura 70|Edge 60 Ultra|Edge 50 Ultra|Pixel 9 Pro/i.test(modelName);
+  const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V70|V60|V50|V40|V30|V29|T5|T4|T3|F35|F33|F31|F27|F25|Z10|Z9|Agni|Edge|Blaze|Razr|Magic/i.test(modelName);
+  const isBudget = /A03|A04|A13|A14|C65|C55|13C|14C|Hot|Smart|Spark|Pop|Y16|Y21|Play|Yuva|Blaze 2|E13|Lite/i.test(modelName);
 
   let baseGeneral, baseRedDot, baseScope2x, baseScope4x, baseAwm, baseFreeLook, baseFireButton, baseDpi;
 
