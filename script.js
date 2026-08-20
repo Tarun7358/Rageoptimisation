@@ -80,7 +80,7 @@ const CONFIG = {
         "Vivo V29 Pro", "Vivo V29", "Vivo V29e", "Vivo V27 Pro", "Vivo V27", "Vivo V25 Pro", "Vivo V23 Pro", "Vivo V21 5G", "Vivo V20", "Vivo V19", "Vivo V17 Pro", "Vivo V15 Pro",
         "Vivo X200 Pro Ultra", "Vivo X200 Pro", "Vivo X200", "Vivo X100 Ultra", "Vivo X100 Pro", "Vivo X100", "Vivo X90 Pro", "Vivo X90", "Vivo X80 Pro", "Vivo X70 Pro+",
         "Vivo T5 5G", "Vivo T4 Pro 5G", "Vivo T4 5G", "Vivo T4x 5G", "Vivo T3 Ultra", "Vivo T3 Pro 5G", "Vivo T3 5G", "Vivo T3x 5G", "Vivo T2 Pro 5G", "Vivo T2 5G", "Vivo T2x 5G", "Vivo T1 Pro 5G", "Vivo T1 5G",
-        "Vivo Y400 5G", "Vivo Y300 Pro", "Vivo Y300 5G", "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y22", "Vivo Y21", "Vivo Y20", "Vivo Y19", "Vivo Y16", "Vivo Y15"
+        "Vivo Y400 5G", "Vivo Y300 Pro", "Vivo Y300 5G", "Vivo Y200e 5G", "Vivo Y200 5G", "Vivo Y100 5G", "Vivo Y56 5G", "Vivo Y36 5G", "Vivo Y28 5G", "Vivo Y27 5G", "Vivo Y22", "Vivo Y21", "Vivo Y20", "Vivo Y19", "Vivo Y17s", "Vivo Y16", "Vivo Y15"
       ],
       sensi: {
         general: "190",
@@ -1180,7 +1180,7 @@ function getModelSensitivity(brandId, modelName, fallbackSensi) {
 
   const isUltraPro = /Pro Max|Ultra|GT 5|GT 6|GT 7|ROG|17 Pro|16 Pro|15 Pro|14 Pro|S25|S24|S23|Fold|RedMagic|Z10 Pro|T5 Pro|T4 Pro|Agni 4|Agni 3|Pura 70|Edge 60 Ultra|Edge 50 Ultra|Pixel 9 Pro/i.test(modelName);
   const isPro5G = /Pro|5G|Plus|Reno|Neo|Nord|V70|V60|V50|V40|V30|V29|T5|T4|T3|F35|F33|F31|F27|F25|Z10|Z9|Agni|Edge|Blaze|Razr|Magic/i.test(modelName);
-  const isBudget = /A03|A04|A13|A14|C65|C55|13C|14C|Hot|Smart|Spark|Pop|Y16|Y21|Play|Yuva|Blaze 2|E13|Lite/i.test(modelName);
+  const isBudget = /A03|A04|A13|A14|C65|C55|13C|14C|Hot|Smart|Spark|Pop|Y16|Y17s|Y17|Y21|Play|Yuva|Blaze 2|E13|Lite/i.test(modelName);
 
   let baseGeneral, baseRedDot, baseScope2x, baseScope4x, baseAwm, baseFreeLook, baseFireButton, baseDpi;
 
